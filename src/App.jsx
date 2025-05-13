@@ -1,32 +1,32 @@
 import "./App.css";
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import LogoCarousel from "./components/LogoCarousel";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
+import LogoCarousel from "./components/LogoCarousel/LogoCarousel";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
     <>
       <Header />
 
-      <Hero />
+      {/* <Hero /> */}
 
-      <Projects />
+      {/* <Projects /> */}
 
-      <Skills />
+      {/* <Skills /> */}
 
-      <Experience />
+      {/* <Experience /> */}
 
-      <LogoCarousel />
+      {/* <LogoCarousel /> */}
 
-      <Contact />
+      {/* <Contact /> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
