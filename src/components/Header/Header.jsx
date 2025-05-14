@@ -1,13 +1,30 @@
+import { useState } from "react";
 import "./Header.css";
 
 function Header() {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  const toggleMenu = (e) => {
+    if (e.target.checked) {
+      setIsHeaderVisible(true);
+    } else {
+      setIsHeaderVisible(false);
+    }
+  };
+
   return (
     <header className="flex h-auto flex-col items-center justify-center bg-white md:h-22">
       <div className="mobile-menu flex w-full justify-between p-4 md:hidden">
         <span className="menu-title">HansanaPrabath</span>
 
-        <div className="menu-btn">
-          <input id="menu-toggle" type="checkbox" hidden />
+        <div className="menu-btn bg-blue-200 p-2">
+          <input
+            id="menu-toggle"
+            className=""
+            type="checkbox"
+            onChange={toggleMenu}
+            hidden
+          />
           <label htmlFor="menu-toggle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +43,8 @@ function Header() {
       </div>
 
       {/* Nav List */}
-      <nav className="nav-links">
-        <ul className="flex flex-col justify-end gap-6 text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
+      <nav className={`${isHeaderVisible ? "flex" : "hidden"} nav-links`}>
+        <ul className="flex flex-col justify-end gap-6 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
           <li className="hover:text-gray-700">
             <a href="">Home</a>
           </li>
