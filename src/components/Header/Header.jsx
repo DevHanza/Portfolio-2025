@@ -12,11 +12,11 @@ function Header() {
     <header className="flex h-auto flex-col items-center justify-center bg-white md:h-22">
       <div className="mobile-menu flex w-full justify-between p-4 md:hidden">
         <span className="menu-title content-center font-medium text-[var(--primary-dark-blue)]">
-          HansanaPrabath
+          <a href="/">HansanaPrabath</a>
         </span>
 
         <button
-          className="menu-btn cursor-pointer bg-blue-200 p-2"
+          className="menu-btn cursor-pointer rounded-md bg-stone-100 p-2 text-[var(--primary-dark-blue)] hover:bg-[var(--primary-dark-blue)]/10"
           onClick={toggleMenu}
         >
           <svg
@@ -36,7 +36,7 @@ function Header() {
 
       {/* Nav List */}
       <nav
-        className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full justify-center bg-[var(--primary-dark-blue)]/5 md:flex md:w-auto md:bg-transparent`}
+        className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full justify-center bg-stone-100 md:flex md:w-auto md:bg-transparent`}
       >
         <ul className="flex flex-col justify-end gap-6 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
           <li className="hover:text-gray-700">
