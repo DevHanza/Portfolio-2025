@@ -1,0 +1,13 @@
+.nav-links {
+  transition: all 0.25s ease;
+  overflow: clip;
+}
+
+.nav-invisible {
+  max-height: 0;
+}
+
+.nav-visible {
+  max-height: 1000px;
+  padding: 1.5em;
+}
