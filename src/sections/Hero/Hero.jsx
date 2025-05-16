@@ -11,7 +11,7 @@ function Hero() {
           Frontend Developer
         </p>
 
-        <p className="mx-auto mb-9 max-w-[85%] text-base md:max-w-110 md:text-lg">
+        <p className="mx-auto mb-9 max-w-[85%] text-base tracking-tight text-[var(--primary-dark-blue)]/75 md:max-w-110 md:text-lg">
           Here’s a look at some of the experiences that have shaped me into the
           developer I am today. 🇱🇰
         </p>
