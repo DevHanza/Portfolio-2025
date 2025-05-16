@@ -14,3 +14,7 @@ body {
   box-sizing: border-box;
   font-family: var(--primary-font);
 }
+
+.section {
+  padding-block: 64px;
+}
