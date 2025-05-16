@@ -1,13 +1,13 @@
 import "./App.css";
 
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Projects from "./components/Projects/Projects";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import LogoCarousel from "./components/LogoCarousel/LogoCarousel";
-import Contact from "./components/Contact/Contact";
+import Footer from "./sections/Footer/Footer";
+import Header from "./sections/Header/Header";
+import Hero from "./sections/Hero/Hero";
+import Projects from "./sections/Projects/Projects";
+import Skills from "./sections/Skills/Skills";
+import Experience from "./sections/Experience/Experience";
+import LogoCarousel from "./sections/LogoCarousel/LogoCarousel";
+import Contact from "./sections/Contact/Contact";
 
 function App() {
   return (
@@ -16,17 +16,17 @@ function App() {
 
       <Hero />
 
-      {/* <Projects className="section"/> */}
+      {/* <Projects /> */}
 
-      {/* <Skills className="section" /> */}
+      {/* <Skills /> */}
 
-      {/* <Experience className="section" /> */}
+      {/* <Experience /> */}
 
-      {/* <LogoCarousel className="section" /> */}
+      {/* <LogoCarousel /> */}
 
-      {/* <Contact className="section" /> */}
+      {/* <Contact /> */}
 
-      {/* <Footer className="section" /> */}
+      {/* <Footer /> */}
     </>
   );
 }
