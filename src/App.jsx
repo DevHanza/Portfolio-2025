@@ -12,21 +12,21 @@ import Contact from "./components/Contact/Contact";
 function App() {
   return (
     <>
-      <Header id="header" />
+      <Header />
 
-      {/* <Hero /> */}
+      <Hero />
 
-      {/* <Projects /> */}
+      {/* <Projects className="section"/> */}
 
-      {/* <Skills /> */}
+      {/* <Skills className="section" /> */}
 
-      {/* <Experience /> */}
+      {/* <Experience className="section" /> */}
 
-      {/* <LogoCarousel /> */}
+      {/* <LogoCarousel className="section" /> */}
 
-      {/* <Contact /> */}
+      {/* <Contact className="section" /> */}
 
-      {/* <Footer /> */}
+      {/* <Footer className="section" /> */}
     </>
   );
 }
