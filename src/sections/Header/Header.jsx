@@ -10,13 +10,13 @@ function Header() {
 
   return (
     <header className="flex h-auto flex-col items-center justify-center bg-white md:h-22">
-      <div className="mobile-menu flex w-full justify-between p-4 md:hidden">
+      <div className="mobile-menu flex w-full justify-between px-4 py-2 md:hidden">
         <span className="menu-title content-center font-medium text-[var(--primary-dark-blue)]">
           <a href="/">HansanaPrabath</a>
         </span>
 
         <button
-          className="menu-btn cursor-pointer rounded-md bg-stone-100 p-2 text-[var(--primary-dark-blue)] hover:bg-[var(--primary-dark-blue)]/10"
+          className="menu-btn cursor-pointer rounded-md bg-stone-100 p-1 text-[var(--primary-dark-blue)] hover:bg-[var(--primary-dark-blue)]/10"
           onClick={toggleMenu}
         >
           <svg
