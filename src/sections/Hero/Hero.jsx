@@ -11,14 +11,14 @@ function Hero() {
           Frontend Developer
         </p>
 
-        <p className="mx-auto mb-9 text-base md:text-lg max-w-[85%] md:max-w-110">
+        <p className="mx-auto mb-9 max-w-[85%] text-base md:max-w-110 md:text-lg">
           Here’s a look at some of the experiences that have shaped me into the
           developer I am today. 🇱🇰
         </p>
 
-        <div className="inline-flex justify-center gap-2">
-          <Button>Hire Me</Button>
-          <Button>Hire Me</Button>
+        <div className="inline-flex flex-wrap justify-center gap-2">
+          <Button type="primary">Hire Me</Button>
+          <Button type="secondary">See Work</Button>
         </div>
       </div>
 
