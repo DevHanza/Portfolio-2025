@@ -40,19 +40,19 @@ function Header() {
       >
         <ul className="flex flex-col justify-end gap-6 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
           <li className="hover:text-gray-700">
-            <a href="">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className="hover:text-gray-700">
-            <a href="">Projects</a>
+            <a href="#Projects">Projects</a>
           </li>
           <li className="hover:text-gray-700">
-            <a href="">Skills</a>
+            <a href="#Skills">Skills</a>
           </li>
           <li className="hover:text-gray-700">
-            <a href="">Experience</a>
+            <a href="#Experience">Experience</a>
           </li>
           <li className="hover:text-gray-700">
-            <a href="">Contact</a>
+            <a href="#Contact">Contact</a>
           </li>
         </ul>
       </nav>
