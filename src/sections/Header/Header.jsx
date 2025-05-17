@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import { NavItems } from "../../App";
 
 function Header() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -39,21 +40,13 @@ function Header() {
         className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full justify-center bg-stone-100 md:flex md:max-h-25! md:w-auto md:bg-transparent`}
       >
         <ul className="flex flex-col justify-end gap-6 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
-          <li className="hover:text-gray-700">
-            <a href="/">Home</a>
-          </li>
-          <li className="hover:text-gray-700">
-            <a href="#Projects">Projects</a>
-          </li>
-          <li className="hover:text-gray-700">
-            <a href="#Skills">Skills</a>
-          </li>
-          <li className="hover:text-gray-700">
-            <a href="#Experience">Experience</a>
-          </li>
-          <li className="hover:text-gray-700">
-            <a href="#Contact">Contact</a>
-          </li>
+          {NavItems.map((item) => {
+            return (
+              <li className="hover:text-gray-700">
+                <a href={item.url}>{item.linkName}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

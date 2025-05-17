@@ -9,6 +9,14 @@ import Experience from "./sections/Experience/Experience";
 import LogoCarousel from "./sections/LogoCarousel/LogoCarousel";
 import Contact from "./sections/Contact/Contact";
 
+export const NavItems = [
+  { linkName: "Home", url: "/" },
+  { linkName: "Projects", url: "#Projects" },
+  { linkName: "Skills", url: "#Skills" },
+  { linkName: "Experience", url: "#Experience" },
+  { linkName: "Contact", url: "#Contact" },
+];
+
 function App() {
   return (
     <>
