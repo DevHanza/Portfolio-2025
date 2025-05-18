@@ -1,5 +1,6 @@
 import { NavItems } from "../../App";
 import SocialButtons from "../../components/SocialButtons";
+import PulseDot from "../../components/pulseDot/pulseDot";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,8 +25,9 @@ function Footer() {
         </div>
 
         <div className="flex justify-center">
-          <a className="cursor-pointer rounded-full bg-green-600/10 px-3 py-1 text-sm text-green-600 md:mb-7">
-            <span>Available for work</span>
+          <a className="flex cursor-pointer items-center gap-3 rounded-full bg-green-600/10 px-3 py-1 text-sm text-green-600 select-none md:mb-7">
+            <PulseDot />
+            <span className="content-center">Available for work</span>
           </a>
         </div>
 

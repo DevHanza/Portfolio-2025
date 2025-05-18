@@ -1,0 +1,23 @@
+.pulse-dot {
+  --dot-color: 0, 166, 62;
+  --dot-size: 8px;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  background-color: rgba(var(--dot-color), 1);
+  border-radius: 100%;
+  box-shadow: 0 0 0 rgba(var(--dot-color), 0.7);
+  animation: pulse 1.5s infinite;
+  position: relative;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--dot-color), 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 var(--dot-size) rgba(var(--dot-color), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--dot-color), 0);
+  }
+}
