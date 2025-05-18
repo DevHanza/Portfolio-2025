@@ -34,7 +34,7 @@ function App() {
 
       {/* <Contact /> */}
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
