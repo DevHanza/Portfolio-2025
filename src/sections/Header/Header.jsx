@@ -42,7 +42,7 @@ function Header() {
         <ul className="flex flex-col justify-end gap-6 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
           {NavItems.map((item) => {
             return (
-              <li className="hover:text-gray-700">
+              <li key={item.linkName} className="hover:text-gray-700">
                 <a href={item.url}>{item.linkName}</a>
               </li>
             );
