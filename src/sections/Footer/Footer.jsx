@@ -5,18 +5,31 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-stone-200 px-5 pt-18 pb-12">
+    <footer className="bg-stone-200 px-5 pt-12 pb-8 md:pt-18 md:pb-12">
       <div className="container mx-auto">
         <div className="mb-3.5 text-center">
           <h1 className="text-xl font-semibold tracking-tight md:text-xl lg:text-2xl">
             Hansana Prabath
           </h1>
-          <p className="text-sm tracking-tight text-[var(--primary-dark-blue)]/75 md:text-sm lg:text-base">
-            Frontend Engineer 🇱🇰
-          </p>
+
+          <div className="">
+            <p className="inline text-sm leading-none tracking-tight text-[var(--primary-dark-blue)]/75 md:text-sm lg:text-base">
+              Frontend Engineer
+            </p>
+            <img
+              className="ml-1 inline-block h-5 leading-none"
+              src="https://emojicdn.elk.sh/🇱🇰"
+            />
+          </div>
         </div>
 
-        <nav className="nav-links w-full justify-center pb-12 md:flex md:max-h-25! md:w-auto md:bg-transparent">
+        <div className="flex justify-center">
+          <a className="cursor-pointer rounded-full bg-green-600/10 px-3 py-1 text-sm text-green-600 md:mb-7">
+            <span>Available for work</span>
+          </a>
+        </div>
+
+        <nav className="nav-links w-full justify-center pb-8 md:flex md:max-h-25! md:w-auto md:bg-transparent md:pb-12">
           <ul className="hidden gap-2 text-sm font-medium text-[var(--primary-dark-blue)]/75 capitalize opacity-75 md:flex md:justify-center md:gap-6">
             {NavItems.map((item) => {
               return (
