@@ -8,7 +8,7 @@ function Hero() {
           Hansana Prabath
         </h1>
         <p className="mb-4.5 text-xl md:text-3xl lg:text-4xl">
-          Frontend Developer
+          Frontend Engineer
         </p>
 
         <p className="mx-auto mb-9 max-w-[85%] text-base tracking-tight text-[var(--primary-dark-blue)]/75 md:max-w-110 md:text-lg">
