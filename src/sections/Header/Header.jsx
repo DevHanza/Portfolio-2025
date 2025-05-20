@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Header.css";
 import { NavItems } from "../../App";
+import HoverBtnWrapper from "../../components/HoverBtnWrapper";
 
 function Header() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -10,7 +11,7 @@ function Header() {
   };
 
   return (
-    <header className="flex h-auto flex-col items-center justify-center bg-white md:h-22 z-100">
+    <header className="z-100 flex h-auto flex-col items-center justify-center bg-white md:h-22">
       <div className="container mx-auto">
         <div className="mobile-menu flex w-full justify-between px-4 py-2 md:hidden">
           <span className="menu-title content-center font-medium text-[var(--primary-dark-blue)]">
@@ -38,13 +39,15 @@ function Header() {
 
         {/* Nav List */}
         <nav
-          className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full justify-center bg-stone-100 md:flex md:max-h-25! md:w-auto md:bg-transparent`}
+          className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full justify-center rounded-md bg-stone-100 md:flex md:max-h-25! md:w-auto md:bg-transparent`}
         >
-          <ul className="flex flex-col justify-end gap-6 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
+          <ul className="flex flex-col justify-end gap-3 text-center text-sm font-medium text-gray-500 uppercase opacity-75 md:flex-row md:justify-center">
             {NavItems.map((item) => {
               return (
                 <li key={item.linkName} className="hover:text-gray-700">
-                  <a href={item.url}>{item.linkName}</a>
+                  <HoverBtnWrapper px={0.75} py={0.25}>
+                    <a href={item.url}>{item.linkName}</a>
+                  </HoverBtnWrapper>
                 </li>
               );
             })}
