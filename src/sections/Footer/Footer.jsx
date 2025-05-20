@@ -56,7 +56,10 @@ function Footer() {
           Reserved.
         </p>
 
-        <SocialButtons classes="gap-4 h-4.5 md:h-5 justify-center" />
+        <SocialButtons
+          size="h-4.5 md:h-5"
+          classes="gap-2 justify-center"
+        />
       </div>
     </footer>
   );
