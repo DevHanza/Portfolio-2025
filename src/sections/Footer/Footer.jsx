@@ -1,6 +1,7 @@
 import { NavItems } from "../../App";
 import SocialButtons from "../../components/SocialButtons";
 import PulseDot from "../../components/pulseDot/pulseDot";
+import HoverBtnWrapper from "../../components/HoverBtnWrapper";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -32,15 +33,17 @@ function Footer() {
         </div>
 
         <nav className="nav-links w-full justify-center pb-8 md:flex md:max-h-25! md:w-auto md:bg-transparent md:pb-12">
-          <ul className="hidden gap-2 text-sm font-medium text-[var(--primary-dark-blue)]/75 capitalize opacity-75 md:flex md:justify-center md:gap-6">
+          <ul className="hidden gap-2 text-sm font-medium text-[var(--primary-dark-blue)]/75 capitalize opacity-75 md:flex md:justify-center">
             {NavItems.map((item) => {
               return (
+                <HoverBtnWrapper px={0.75} py={0.25}>
                 <li
                   key={item.linkName}
                   className="hover:text-[var(--primary-dark-blue)]"
                 >
                   <a href={item.url}>{item.linkName}</a>
                 </li>
+                </HoverBtnWrapper>
               );
             })}
           </ul>
