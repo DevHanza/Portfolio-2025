@@ -10,7 +10,7 @@ function Header() {
   };
 
   return (
-    <header className="flex h-auto flex-col items-center justify-center bg-white md:h-22">
+    <header className="flex h-auto flex-col items-center justify-center bg-white md:h-22 z-100">
       <div className="container mx-auto">
         <div className="mobile-menu flex w-full justify-between px-4 py-2 md:hidden">
           <span className="menu-title content-center font-medium text-[var(--primary-dark-blue)]">
