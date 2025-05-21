@@ -8,6 +8,7 @@ import Skills from "./sections/Skills/Skills";
 import Experience from "./sections/Experience/Experience";
 import LogoCarousel from "./sections/LogoCarousel/LogoCarousel";
 import Contact from "./sections/Contact/Contact";
+import BackToTopButton from "./components/BackToTopButton";
 
 export const NavItems = [
   { linkName: "Home", url: "/" },
@@ -34,7 +35,9 @@ function App() {
 
       {/* <Contact /> */}
 
+      <BackToTopButton/>
       <Footer />
+
     </>
   );
 }
