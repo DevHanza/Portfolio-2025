@@ -1,23 +1,22 @@
 import { useEffect, useState } from "react";
 
 function BackToTopButton() {
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsVisible(window.scrollY > 150);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
-    })
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -25,7 +24,7 @@ function BackToTopButton() {
       <button
         onClick={scrollToTop}
         id="backToTop"
-        className={`${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"} transition-all duration-300 ease-in-out fixed right-6 bottom-6 z-100 cursor-pointer rounded-xl bg-[var(--primary-dark-blue)] p-3`}
+        className={`${isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"} fixed right-6 bottom-6 z-100 cursor-pointer rounded-xl bg-[var(--primary-dark-blue)] p-3 transition-all duration-300 ease-in-out`}
       >
         <svg
           className="h-7 text-white"
