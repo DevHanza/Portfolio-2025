@@ -13,7 +13,7 @@ function Projects() {
         and a lot of coffee."
         />
 
-        <div className="flex flex-col gap-8 md:flex-row lg:gap-5">
+        <div className="flex flex-col gap-8 md:gap-4 md:flex-row lg:gap-5">
           {/* <ProjectCard ghLink="" liveLink="" imgSrc="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=600"/> */}
           <ProjectCard />
           <ProjectCard />
