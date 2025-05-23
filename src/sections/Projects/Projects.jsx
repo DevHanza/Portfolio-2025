@@ -1,6 +1,7 @@
 import SectionHeading from "../../components/SectionHeading";
 import ProjectCard from "../../components/ProjectCards/Card/ProjectCard";
 import { Button } from "../../components/Buttons";
+import MiniProjectsCard from "../../components/ProjectCards/Mini-Card/Mini-Project-Card";
 
 function Projects() {
   return (
@@ -13,11 +14,20 @@ function Projects() {
         and a lot of coffee."
         />
 
-        <div className="flex flex-col gap-8 md:gap-4 md:flex-row lg:gap-5">
-          {/* <ProjectCard ghLink="" liveLink="" imgSrc="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=600"/> */}
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        <div>
+          <div className="flex flex-col gap-8 md:flex-row md:gap-4 lg:gap-5">
+            {/* <ProjectCard ghLink="" liveLink="" imgSrc="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=600"/> */}
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </div>
+
+          <div className="">
+            <MiniProjectsCard/>
+            <MiniProjectsCard/>
+            <MiniProjectsCard/>
+            <MiniProjectsCard/>
+          </div>
         </div>
 
         <div className="inline-flex flex-wrap justify-center gap-2">
