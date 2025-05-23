@@ -25,7 +25,7 @@ function App() {
 
       <Hero />
 
-      {/* <Projects /> */}
+      <Projects />
 
       {/* <Skills /> */}
 
@@ -35,9 +35,8 @@ function App() {
 
       {/* <Contact /> */}
 
-      <BackToTopButton/>
+      <BackToTopButton />
       <Footer />
-
     </>
   );
 }
