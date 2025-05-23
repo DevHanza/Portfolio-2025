@@ -3,7 +3,7 @@ import { Button } from "../../components/Buttons";
 function Hero() {
   return (
     <section id="hero" className="section">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-[66rem]">
         <div className="hero-content text-center">
           <h1 className="hero-text mb-1 text-4xl font-semibold tracking-tight md:text-6xl lg:text-7xl">
             Hansana Prabath

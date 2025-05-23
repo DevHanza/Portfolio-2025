@@ -4,8 +4,7 @@ import SectionLabel from "../../components/SectionLabel";
 function Projects() {
   return (
     <section id="hero" className="section">
-      <div className="container mx-auto">
-        <div className="flex justify-center">
+      <div className="container mx-auto max-w-[66rem] flex flex-col gap-12">
 
         </div>
         <SectionHeading
