@@ -24,8 +24,8 @@ function Hero() {
           </div>
 
           <div className="inline-flex flex-wrap justify-center gap-2">
-            <Button type="primary">Hire Me</Button>
-            <Button type="secondary">See Work</Button>
+            <Button type="primary" href="https://linkedin.com/in/devhanza">Hire Me</Button>
+            <Button type="secondary" href="https://contra.com/devhanza/">See Work</Button>
           </div>
         </div>
 
