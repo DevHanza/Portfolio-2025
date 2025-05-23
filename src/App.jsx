@@ -9,6 +9,7 @@ import Experience from "./sections/Experience/Experience";
 import LogoCarousel from "./sections/LogoCarousel/LogoCarousel";
 import Contact from "./sections/Contact/Contact";
 import BackToTopButton from "./components/BackToTopButton";
+import AnnouncementBar from "./components/AnnouncementBar";
 
 export const NavItems = [
   { linkName: "Home", url: "/" },
@@ -21,6 +22,8 @@ export const NavItems = [
 function App() {
   return (
     <>
+      <AnnouncementBar />
+
       <Header />
 
       <Hero />
