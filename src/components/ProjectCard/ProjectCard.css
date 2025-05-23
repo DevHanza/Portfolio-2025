@@ -1,0 +1,17 @@
+.project-card {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+
+  /* 20px is the gap between the cards. */
+
+  /* `md` 48rem (768px) */
+  @media (width >= 48rem) {
+      flex: 1;
+    /* flex: 1 1 calc(50% - 8px);  */
+  }
+
+  /* `lg` 64rem (1024px) */
+  @media (width >= 64rem) {
+    /* flex: 1 1 calc(33.333% - 20px); */
+  }
+}
