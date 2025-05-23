@@ -17,4 +17,10 @@ body {
 
 .section {
   padding-block: 64px;
+  margin-inline: 1rem;
+
+  /* `md` -	48rem (768px) */
+  @media (width >= 48rem) {
+    margin-inline: 0;
+  }
 }
