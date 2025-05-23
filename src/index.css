@@ -21,6 +21,11 @@ body {
 
   /* `md` -	48rem (768px) */
   @media (width >= 48rem) {
+    margin-inline: 2rem;
+  }
+
+  /* `lg` 64rem (1024px) */
+  @media (width >= 64rem) {
     margin-inline: 0;
   }
 }
