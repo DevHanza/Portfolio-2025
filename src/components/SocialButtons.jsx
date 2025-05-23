@@ -12,6 +12,7 @@ function SocialButtons({ classes, size = "h-5 md:h-6" }) {
             height={"100%"}
             fill={"currentColor"}
             viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
           >
             {/* Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free */}
             <path d="M4.983 2.821a2.188 2.188 0 1 0 0 4.376 2.188 2.188 0 1 0 0-4.376M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66zm-6.142 0H6.87v12.139H3.095z"></path>
@@ -28,6 +29,7 @@ function SocialButtons({ classes, size = "h-5 md:h-6" }) {
             height={"100%"}
             fill={"currentColor"}
             viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
           >
             {/* Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free */}
             <path
@@ -48,6 +50,7 @@ function SocialButtons({ classes, size = "h-5 md:h-6" }) {
             height={"100%"}
             fill={"currentColor"}
             viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
           >
             {/* Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free */}
             <path d="M17.24 19.399v-4.804h1.6V21H4.381v-6.405h1.598v4.804zM7.582 17.8h8.055v-1.604H7.582zm.195-3.64 7.859 1.641.34-1.552-7.861-1.642zm1.018-3.794 7.281 3.398.678-1.463-7.281-3.399-.678 1.454zm2.037-3.589 6.166 5.142 1.018-1.216-6.162-5.14-1.016 1.213zm3.982-3.778-1.311.969 4.803 6.454 1.313-.971-4.807-6.452z"></path>
@@ -90,6 +93,7 @@ function SocialButtons({ classes, size = "h-5 md:h-6" }) {
             height={"100%"}
             fill={"currentColor"}
             viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
           >
             {/* Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free */}
             <path d="M7.826 10.083a.8.8 0 0 0-.468-.175h-.701v4.198h.701a.8.8 0 0 0 .469-.175q.233-.175.233-.525v-2.798q0-.35-.234-.525M19.236 3H4.764C3.791 3 3.002 3.787 3 4.76v14.48c.002.973.791 1.76 1.764 1.76h14.473c.973 0 1.762-.787 1.764-1.76V4.76A1.765 1.765 0 0 0 19.236 3M9.195 13.414c0 .755-.466 1.901-1.942 1.898H5.389V8.665h1.903c1.424 0 1.902 1.144 1.903 1.899zm4.045-3.562H11.1v1.544h1.309v1.188H11.1v1.543h2.142v1.188h-2.498a.813.813 0 0 1-.833-.792V9.497a.813.813 0 0 1 .792-.832h2.539zm4.165 4.632c-.531 1.235-1.481.99-1.906 0l-1.548-5.818h1.309l1.193 4.569 1.188-4.569h1.31z"></path>
