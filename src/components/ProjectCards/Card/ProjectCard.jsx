@@ -1,4 +1,4 @@
-import HoverBtnWrapper from "../HoverBtnWrapper";
+import HoverBtnWrapper from "../../HoverBtnWrapper";
 import "./ProjectCard.css";
 
 function ProjectCard({
@@ -12,7 +12,7 @@ function ProjectCard({
     <div className="project-card flex flex-col gap-4.5">
       <a href={ghLink}>
         <img
-          className="aspect-video w-full rounded-lg overflow-hidden object-cover object-center"
+          className="aspect-video w-full overflow-hidden rounded-lg object-cover object-center"
           src={imgSrc}
           alt="Project Image"
         />

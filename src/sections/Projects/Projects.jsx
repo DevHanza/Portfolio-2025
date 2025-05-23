@@ -1,5 +1,5 @@
 import SectionHeading from "../../components/SectionHeading";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import ProjectCard from "../../components/ProjectCards/Card/ProjectCard";
 import { Button } from "../../components/Buttons";
 
 function Projects() {
