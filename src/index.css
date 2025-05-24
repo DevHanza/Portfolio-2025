@@ -8,6 +8,13 @@
   --primary-font: "Inter", sans-serif;
 }
 
+::-moz-selection {
+  @apply bg-[var(--primary-blue)]/20;
+}
+::selection {
+  @apply bg-[var(--primary-blue)]/20;
+}
+
 html {
   scroll-behavior: smooth;
 }
