@@ -10,7 +10,7 @@ function ProjectCard({
 }) {
   return (
     <div className="project-card flex flex-col gap-4.5">
-      <a href={ghLink}>
+      <a href={ghLink} target="_blank">
         <img
           className="aspect-video w-full overflow-hidden rounded-lg object-cover object-center"
           src={imgSrc}
@@ -20,14 +20,14 @@ function ProjectCard({
 
       <div className="px-2">
         <div className="flex items-center justify-between gap-5 md:gap-2 lg:gap-5">
-          <a href={ghLink}>
-            <h4 className="text-lg tracking-tight leading-tight font-medium text-balance">
+          <a href={ghLink} target="_blank">
+            <h4 className="text-lg leading-tight font-medium tracking-tight text-balance">
               {title}
             </h4>
           </a>
           <div className="flex md:hidden lg:flex">
             <HoverBtnWrapper px={0.25} py={0.25}>
-              <a href={ghLink}>
+              <a href={ghLink} target="_blank">
                 <svg
                   className="h-5 w-5"
                   xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ function ProjectCard({
             </HoverBtnWrapper>
 
             <HoverBtnWrapper px={0.25} py={0.25}>
-              <a href={liveLink}>
+              <a href={liveLink} target="_blank">
                 <svg
                   className="h-5 w-5"
                   xmlns="http://www.w3.org/2000/svg"
