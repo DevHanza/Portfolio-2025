@@ -5,7 +5,7 @@ import MiniProjectsCard from "../../components/ProjectCards/Mini-Card/Mini-Proje
 
 function Projects() {
   return (
-    <section id="hero" className="section">
+    <section id="projects" className="section">
       <div className="container mx-auto flex max-w-[66rem] flex-col gap-12">
         <SectionHeading
           label="Projects"
@@ -23,10 +23,10 @@ function Projects() {
           </div>
 
           <div className="flex flex-col gap-3 md:flex-row md:gap-4 lg:gap-5">
-            <MiniProjectsCard/>
-            <MiniProjectsCard/>
-            <MiniProjectsCard/>
-            <MiniProjectsCard/>
+            <MiniProjectsCard />
+            <MiniProjectsCard />
+            <MiniProjectsCard />
+            <MiniProjectsCard />
           </div>
         </div>
 

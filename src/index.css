@@ -8,6 +8,10 @@
   --primary-font: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -18,6 +22,7 @@ body {
 .section {
   padding-block: 64px;
   margin-inline: 1rem;
+  scroll-margin-top: 100px;
 
   /* `md` -	48rem (768px) */
   @media (width >= 48rem) {
