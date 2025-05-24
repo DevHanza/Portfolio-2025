@@ -13,10 +13,10 @@ import AnnouncementBar from "./components/AnnouncementBar";
 
 export const NavItems = [
   { linkName: "Home", url: "/" },
-  { linkName: "Projects", url: "#Projects" },
-  { linkName: "Skills", url: "#Skills" },
-  { linkName: "Experience", url: "#Experience" },
-  { linkName: "Contact", url: "#Contact" },
+  { linkName: "Projects", url: "#projects" },
+  { linkName: "Skills", url: "#skills" },
+  { linkName: "Experience", url: "#experience" },
+  { linkName: "Contact", url: "#contact" },
 ];
 
 function App() {
