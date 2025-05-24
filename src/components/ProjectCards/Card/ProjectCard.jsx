@@ -19,9 +19,9 @@ function ProjectCard({
       </a>
 
       <div className="px-2">
-        <div className="flex items-center justify-between gap-5 md:gap-2 lg:gap-5">
+        <div className="flex items-start justify-between gap-5 md:gap-2 lg:gap-5">
           <a href={ghLink} target="_blank">
-            <h4 className="text-lg leading-tight font-medium tracking-tight text-balance">
+            <h4 className="text-lg leading-tight font-medium tracking-tight">
               {title}
             </h4>
           </a>
