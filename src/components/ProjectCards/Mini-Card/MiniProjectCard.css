@@ -1,0 +1,14 @@
+.mini-project-card {
+  flex: 1 1 calc(50% - 4px);
+  box-sizing: border-box;
+
+  /* `md` 48rem (768px) */
+  @media (width >= 48rem) {
+    flex: 1 1 calc(25% - 4px);
+  }
+
+  /* `lg` 64rem (1024px) */
+  @media (width >= 64rem) {
+    flex: 1;
+  }
+}
