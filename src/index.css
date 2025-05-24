@@ -22,7 +22,7 @@ body {
 .section {
   padding-block: 64px;
   margin-inline: 1rem;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
 
   /* `md` -	48rem (768px) */
   @media (width >= 48rem) {
@@ -32,5 +32,6 @@ body {
   /* `lg` 64rem (1024px) */
   @media (width >= 64rem) {
     margin-inline: 0;
+    scroll-margin-top: 100px;
   }
 }
