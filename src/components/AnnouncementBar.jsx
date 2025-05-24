@@ -6,19 +6,21 @@ export default function AnnouncementBar() {
   if (!showBanner) return null;
 
   return (
-    <div className="sticky top-0 left-0 flex w-full items-center justify-center bg-[var(--primary-dark-blue)] p-2 text-white">
-      <p className="mx-auto min-w-2xs">
-        This Site is currently under development! ♻️
+    <div className="sticky top-0 left-0 w-full bg-[var(--primary-dark-blue)] px-4 py-2 text-white md:px-0">
+      <p className="max-w-85 text-sm md:mx-auto md:max-w-[80%] md:text-center md:text-base">
+        🚧 Pardon the Dust —{" "}
+        <span className="font-medium">A Fresh New Look is Coming!</span>
       </p>
       <button
         onClick={() => setShowBanner(false)}
-        className="absolute right-4 cursor-pointer text-white hover:text-gray-300"
+        className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer"
         aria-label="Close Announcement Bar"
       >
         <svg
+          className="h-5 w-5 md:h-6"
           xmlns="http://www.w3.org/2000/svg"
-          width={24}
-          height={24}
+          width="100%"
+          height="100%"
           fill={"currentColor"}
           viewBox="0 0 24 24"
         >
