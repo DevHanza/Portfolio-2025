@@ -1,7 +1,7 @@
 import SectionHeading from "../../components/SectionHeading";
 import ProjectCard from "../../components/ProjectCards/Card/ProjectCard";
 import { Button } from "../../components/Buttons";
-import MiniProjectsCardSlider from "../../components/MiniProjectsCardSlider";
+import MiniProjectsCardSlider from "../../components/ProjectCards/MiniProjectsCardSlider";
 
 function Projects() {
   return (
