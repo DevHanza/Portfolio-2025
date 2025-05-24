@@ -20,7 +20,7 @@ body {
 }
 
 .section {
-  padding-block: 64px;
+  padding-top: 64px;
   margin-inline: 1rem;
   scroll-margin-top: 50px;
 
