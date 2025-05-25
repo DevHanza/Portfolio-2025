@@ -13,7 +13,7 @@ function MiniProjectsCardSlider() {
         />
       </div>
 
-      <div className="flex flex-wrap gap-1 md:flex-row lg:gap-2">
+      <div className="flex flex-nowrap overflow-x-auto gap-1 md:flex-row lg:gap-2">
         <MiniProjectsCard />
         <MiniProjectsCard />
         <MiniProjectsCard />
