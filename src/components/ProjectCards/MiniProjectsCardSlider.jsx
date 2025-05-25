@@ -5,7 +5,7 @@ import MiniProjectsCard from "./Mini-Card/MiniProjectCard";
 function MiniProjectsCardSlider() {
   return (
     <div className="relative select-none">
-      <div className="absolute top-1/2 left-0 z-100 inline-block -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-gray-50 p-1 shadow-md transition-all duration-150 ease-in-out hover:bg-gray-100 hover:shadow-none">
+      <div className="absolute top-1/2 left-0 z-100 inline-block -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-gray-50 p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100">
         <ChevronLeftIcon
           height="28"
           width="28"
@@ -20,7 +20,7 @@ function MiniProjectsCardSlider() {
         <MiniProjectsCard />
       </div>
 
-      <div className="absolute top-1/2 right-0 inline-block translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-gray-50 p-1 shadow-md transition-all duration-150 ease-in-out hover:bg-gray-100 hover:shadow-none">
+      <div className="absolute top-1/2 right-0 inline-block translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-gray-50 p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100">
         <ChevronRightIcon
           height="28"
           width="28"
