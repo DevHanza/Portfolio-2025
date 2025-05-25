@@ -23,20 +23,20 @@ function ProjectCard({
       <div className="px-2">
         <div className="flex items-start justify-between gap-5 md:gap-2 lg:gap-5">
           <a href={ghLink} target="_blank">
-            <h4 className="text-lg leading-tight font-medium tracking-tight">
+            <h4 className="text-lg leading-tight font-medium tracking-tight fill-[var(--primary-dark-blue)]">
               {title}
             </h4>
           </a>
           <div className="flex md:hidden lg:flex">
             <HoverBtnWrapper px={0.25} py={0.25}>
               <a href={ghLink} target="_blank">
-                <GithubIcon className="h-5 w-5" />
+                <GithubIcon className="h-5 w-5 fill-[var(--primary-dark-blue)]" />
               </a>
             </HoverBtnWrapper>
 
             <HoverBtnWrapper px={0.25} py={0.25}>
               <a href={liveLink} target="_blank">
-                <LinkIcon className="h-5 w-5" />
+                <LinkIcon className="h-5 w-5 fill-[var(--primary-dark-blue)]" />
               </a>
             </HoverBtnWrapper>
           </div>
