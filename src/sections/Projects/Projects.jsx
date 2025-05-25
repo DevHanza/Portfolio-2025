@@ -25,8 +25,6 @@ function Projects() {
           <MiniProjectsCardSlider />
         </div>
 
-        <div className="flex h-20 justify-center bg-linear-to-t from-white to-white/80 py-1 text-gray-950 hover:text-gray-950/70 dark:from-gray-950 dark:to-gray-950/40 dark:text-white dark:hover:text-white/70"></div>
-
         <div className="inline-flex flex-wrap justify-center gap-2">
           <Button type="secondary">See More</Button>
         </div>
