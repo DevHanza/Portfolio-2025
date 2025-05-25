@@ -13,11 +13,12 @@ function MiniProjectsCardSlider() {
         />
       </div>
 
-      <div className="flex flex-nowrap overflow-x-auto gap-1 md:flex-row lg:gap-2">
-        <MiniProjectsCard />
-        <MiniProjectsCard />
-        <MiniProjectsCard />
-        <MiniProjectsCard />
+      <div className="flex flex-nowrap gap-1 overflow-x-auto lg:gap-2">
+        <div className="flex shrink-0 basis-full flex-nowrap gap-1 overflow-x-auto md:flex-row lg:gap-2">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <MiniProjectsCard />
+          ))}
+        </div>
       </div>
 
       <div className="absolute top-1/2 right-0 inline-block translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-gray-50 p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100">
