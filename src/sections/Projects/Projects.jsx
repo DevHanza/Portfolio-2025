@@ -24,10 +24,6 @@ function Projects() {
 
           <MiniProjectsCardSlider />
         </div>
-
-        <div className="inline-flex flex-wrap justify-center gap-2">
-          <Button type="secondary">See More</Button>
-        </div>
       </div>
     </section>
   );
