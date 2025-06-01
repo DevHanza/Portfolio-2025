@@ -1,4 +1,4 @@
-import HoverBtnWrapper from "./HoverBtnWrapper";
+import HoverBtnWrapper from "./Buttons/HoverBtnWrapper";
 import LinkedinIcon from "../assets/svg/linkedin";
 import GithubIcon from "../assets/svg/github";
 import StackOverflowIcon from "../assets/svg/stack-overflow";

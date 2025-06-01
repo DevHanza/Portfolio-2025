@@ -1,7 +1,7 @@
 import { NavItems } from "../../App";
 import SocialButtons from "../../components/SocialButtons";
 import PulseDot from "../../components/pulseDot/pulseDot";
-import HoverBtnWrapper from "../../components/HoverBtnWrapper";
+import HoverBtnWrapper from "../../components/Buttons/HoverBtnWrapper";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -56,10 +56,7 @@ function Footer() {
           Reserved.
         </p>
 
-        <SocialButtons
-          size="h-4.5 md:h-5"
-          classes="gap-2 justify-center"
-        />
+        <SocialButtons size="h-4.5 md:h-5" classes="gap-2 justify-center" />
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 import GithubIcon from "../../../assets/svg/github";
 import LinkIcon from "../../../assets/svg/link";
-import HoverBtnWrapper from "../../HoverBtnWrapper";
+import HoverBtnWrapper from "../../Buttons/HoverBtnWrapper";
 import "./ProjectCard.css";
 
 function ProjectCard({
@@ -23,7 +23,7 @@ function ProjectCard({
       <div className="px-2">
         <div className="flex items-start justify-between gap-5 md:gap-2 lg:gap-5">
           <a href={ghLink} target="_blank">
-            <h4 className="text-lg leading-tight font-medium tracking-tight fill-[var(--primary-dark-blue)]">
+            <h4 className="fill-[var(--primary-dark-blue)] text-lg leading-tight font-medium tracking-tight">
               {title}
             </h4>
           </a>

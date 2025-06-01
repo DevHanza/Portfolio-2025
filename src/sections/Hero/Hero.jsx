@@ -1,4 +1,4 @@
-import { Button } from "../../components/Buttons";
+import { Button } from "../../components/Buttons/Buttons";
 import SocialButtons from "../../components/SocialButtons";
 
 function Hero() {

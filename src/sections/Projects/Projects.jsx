@@ -1,6 +1,6 @@
-import SectionHeading from "../../components/SectionHeading";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import ProjectCard from "../../components/ProjectCards/Card/ProjectCard";
-import { Button } from "../../components/Buttons";
+import { Button } from "../../components/Buttons/Buttons";
 import MiniProjectsCardSlider from "../../components/ProjectCards/MiniProjectsCardSlider";
 
 function Projects() {
