@@ -24,11 +24,11 @@ function SocialButtons({
         </a>
       </HoverBtnWrapper>
 
-      <HoverBtnWrapper>
+      {/* <HoverBtnWrapper>
         <a href="https://stackoverflow.com/users/16218477/hansana-prabath">
           <StackOverflowIcon className={`${size} ${color}`} />
         </a>
-      </HoverBtnWrapper>
+      </HoverBtnWrapper> */}
 
       <HoverBtnWrapper>
         <a href="https://medium.com/@devhanza">
@@ -36,11 +36,11 @@ function SocialButtons({
         </a>
       </HoverBtnWrapper>
 
-      <HoverBtnWrapper>
+      {/* <HoverBtnWrapper>
         <a href="https://dev.to/devhanza">
           <DevToIcon className={`${size} ${color}`} />
         </a>
-      </HoverBtnWrapper>
+      </HoverBtnWrapper> */}
     </div>
   );
 }
