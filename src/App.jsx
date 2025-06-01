@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Footer from "./sections/Footer/Footer";
+import AnnouncementBar from "./components/AnnouncementBar";
 import Header from "./sections/Header/Header";
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
@@ -9,7 +9,7 @@ import Experience from "./sections/Experience/Experience";
 import LogoCarousel from "./sections/LogoCarousel/LogoCarousel";
 import Contact from "./sections/Contact/Contact";
 import BackToTopButton from "./components/BackToTopButton";
-import AnnouncementBar from "./components/AnnouncementBar";
+import Footer from "./sections/Footer/Footer";
 
 export const NavItems = [
   { linkName: "Home", url: "/" },

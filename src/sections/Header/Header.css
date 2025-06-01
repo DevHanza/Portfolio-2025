@@ -16,5 +16,6 @@ header {
 
 .nav-visible {
   max-height: 1000px;
-  padding: 1.5em;
+  padding: 1.5em 0.5em;
+  margin-top: 0.5em;
 }
