@@ -13,31 +13,31 @@ function SocialButtons({
   return (
     <div className={`flex ${classes}`}>
       <HoverBtnWrapper>
-        <a href="https://www.linkedin.com/in/devhanza/">
+        <a href="https://www.linkedin.com/in/devhanza/" target="_blank">
           <LinkedinIcon className={`${size} ${color}`} />
         </a>
       </HoverBtnWrapper>
 
       <HoverBtnWrapper>
-        <a href="https://github.com/DevHanza">
+        <a href="https://github.com/DevHanza" target="_blank">
           <GithubIcon className={`${size} ${color}`} />
         </a>
       </HoverBtnWrapper>
 
       {/* <HoverBtnWrapper>
-        <a href="https://stackoverflow.com/users/16218477/hansana-prabath">
+        <a href="https://stackoverflow.com/users/16218477/hansana-prabath" target="_blank">
           <StackOverflowIcon className={`${size} ${color}`} />
         </a>
       </HoverBtnWrapper> */}
 
       <HoverBtnWrapper>
-        <a href="https://medium.com/@devhanza">
+        <a href="https://medium.com/@devhanza" target="_blank">
           <MediumIcon className={`${size} ${color}`} />
         </a>
       </HoverBtnWrapper>
 
       {/* <HoverBtnWrapper>
-        <a href="https://dev.to/devhanza">
+        <a href="https://dev.to/devhanza" target="_blank">
           <DevToIcon className={`${size} ${color}`} />
         </a>
       </HoverBtnWrapper> */}
