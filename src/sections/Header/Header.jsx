@@ -32,7 +32,7 @@ function Header() {
 
           {/* Nav List */}
           <nav
-            className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full basis-full justify-center rounded-md bg-stone-100 lg:m-0! lg:flex lg:max-h-25! lg:w-auto lg:basis-auto lg:bg-transparent lg:p-0!`}
+            className={`${isHeaderVisible ? "nav-visible" : "nav-invisible"} nav-links w-full basis-full justify-center rounded-md bg-stone-100 lg:m-0! lg:flex lg:max-h-25! lg:w-auto lg:basis-auto lg:rounded-none lg:bg-transparent lg:p-0!`}
           >
             <ul className="flex flex-col justify-end gap-3 text-sm font-medium text-gray-500 uppercase lg:flex-row lg:justify-center lg:gap-2">
               {NavItems.map((item) => {
