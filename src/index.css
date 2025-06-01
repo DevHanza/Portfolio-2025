@@ -6,6 +6,7 @@
   --primary-mid-blue: #000c66;
 
   --primary-font: "Inter", sans-serif;
+  --container-width: 60rem;
 }
 
 ::-moz-selection {

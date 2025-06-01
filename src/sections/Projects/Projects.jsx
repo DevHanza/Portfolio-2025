@@ -6,7 +6,7 @@ import MiniProjectsCardSlider from "../../components/ProjectCards/MiniProjectsCa
 function Projects() {
   return (
     <section id="projects" className="section">
-      <div className="container mx-auto flex max-w-[66rem] flex-col gap-12">
+      <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
         <SectionHeading
           label="Projects"
           title="Work I'm Proud Of"
