@@ -27,19 +27,7 @@ function ProjectCard({
               {title}
             </h4>
           </a>
-          <div className="flex md:hidden lg:flex">
-            <HoverBtnWrapper px={0.25} py={0.25}>
-              <a href={ghLink} target="_blank">
-                <GithubIcon className="h-5 w-5 fill-[var(--primary-dark-blue)]" />
-              </a>
-            </HoverBtnWrapper>
-
-            <HoverBtnWrapper px={0.25} py={0.25}>
-              <a href={liveLink} target="_blank">
-                <LinkIcon className="h-5 w-5 fill-[var(--primary-dark-blue)]" />
-              </a>
-            </HoverBtnWrapper>
-          </div>
+          <ProjectCardLinks ghLink liveLink />
         </div>
 
         <p className="mt-2 text-base tracking-tight text-[var(--primary-dark-blue)]/75">
@@ -51,3 +39,21 @@ function ProjectCard({
 }
 
 export default ProjectCard;
+
+function ProjectCardLinks(ghLink, liveLink) {
+  return (
+    <div className="flex md:hidden lg:flex gap-1 md:gap-0">
+      <HoverBtnWrapper px={0.25} py={0.25}>
+        <a href={ghLink} target="_blank">
+          <GithubIcon className="h-6 w-6 md:h-5 fill-[var(--primary-dark-blue)]" />
+        </a>
+      </HoverBtnWrapper>
+
+      <HoverBtnWrapper px={0.25} py={0.25}>
+        <a href={liveLink} target="_blank">
+          <LinkIcon className="h-6 w-6 md:h-5 fill-[var(--primary-dark-blue)]" />
+        </a>
+      </HoverBtnWrapper>
+    </div>
+  );
+}
