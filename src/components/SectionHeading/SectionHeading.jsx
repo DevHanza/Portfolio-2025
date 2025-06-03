@@ -9,66 +9,39 @@ function SectionHeading({
   direction = "col",
 }) {
   const isRow = direction === "row";
+  const isCol = direction === "col";
 
-  if (direction === "col") {
-    return (
-      <div className={`max-w-[var(--container-width)] text-center`}>
-        <SectionLabel text={label} />
+  return (
+    <div
+      className={`max-w-[var(--container-width)] ${isRow ? "" : isCol ? "text-center" : ""}`}
+    >
+      <SectionLabel text={label} />
 
-        <div className="items-center pt-4 lg:pt-6">
-          <div className="flex flex-col">
-            <div className="mx-auto mb-3">
-              <h2
-                className={`text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl ${title_m_width}`}
-              >
-                {title}
-              </h2>
-            </div>
+      <div className="items-center pt-4 lg:pt-6">
+        <div className={`flex ${isRow ? "flex-row" : isCol ? "flex-col" : ""}`}>
+          <div
+            className={`basis-full ${isRow ? "" : isCol ? "mx-auto mb-3" : ""}`}
+          >
+            <h2
+              className={`text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl ${title_m_width}`}
+            >
+              {title}
+            </h2>
+          </div>
 
-            <div className="">
-              <p
-                className={`${text_m_width} text-base font-normal tracking-tight text-[var(--primary-dark-blue)]/75`}
-              >
-                {title_text}
-              </p>
-            </div>
+          <div
+            className={`${isRow ? "" : isCol ? "mx-auto text-center" : ""} basis-full content-center`}
+          >
+            <p
+              className={`${text_m_width} text-base font-normal tracking-tight text-[var(--primary-dark-blue)]/75`}
+            >
+              {title_text}
+            </p>
           </div>
         </div>
       </div>
-    );
-
-    //
-    //
-    //
-    //
-  } else if (direction === "row") {
-    return (
-      <div className={`max-w-[var(--container-width)]`}>
-        <SectionLabel text={label} />
-
-        <div className="items-center pt-4 lg:pt-6">
-          <div className="flex flex-row">
-            <div className="basis-full">
-              <h2
-                className={`text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl ${title_m_width}`}
-              >
-                {title}
-              </h2>
-            </div>
-
-            <div className="basis-full content-center">
-              <p
-                className={`${text_m_width} text-base font-normal tracking-tight text-[var(--primary-dark-blue)]/75`}
-              >
-                {title_text}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-  }
+    </div>
+  );
 }
 
 export default SectionHeading;
