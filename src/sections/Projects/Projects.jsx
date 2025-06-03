@@ -9,9 +9,11 @@ function Projects() {
       <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
         <SectionHeading
           label="Projects"
-          title="Work I'm Proud Of"
-          title_text="Here's a peek at some of the projects I've built with love, curiosity,
-        and a lot of coffee."
+          title="Projects & Work I'm Proud Of"
+          title_text="Here is some of the recent work I've done using my programming and problem-solving skills."
+          direction="row"
+          text_m_width=""
+          title_m_width="max-w-70"
         />
 
         <div className="flex flex-col gap-10">
