@@ -21,7 +21,7 @@ function MiniProjectsCardSlider() {
   return (
     <div className="relative select-none">
       <div
-        className="absolute top-1/2 left-0 z-100 inline-block -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100"
+        className="absolute top-1/2 left-0 z-90 inline-block -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100"
         onClick={handlePrevSlide}
       >
         <ChevronLeftIcon
@@ -32,7 +32,7 @@ function MiniProjectsCardSlider() {
       </div>
 
       <div
-        className="absolute top-1/2 right-0 z-100 inline-block translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100"
+        className="absolute top-1/2 right-0 z-90 inline-block translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1 shadow-sm transition-all duration-150 ease-in-out hover:bg-gray-50 active:bg-gray-100"
         onClick={handleNextSlide}
       >
         <ChevronRightIcon
