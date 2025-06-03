@@ -13,17 +13,19 @@ function SectionHeading({
 
   return (
     <div
-      className={`max-w-[var(--container-width)] ${isRow ? "" : isCol ? "text-center" : ""}`}
+      className={`max-w-[var(--container-width)] ${isRow ? "text-center md:text-start" : isCol ? "text-center" : ""}`}
     >
       <SectionLabel text={label} />
 
       <div className="items-center pt-4 lg:pt-6">
-        <div className={`flex ${isRow ? "flex-row" : isCol ? "flex-col" : ""}`}>
+        <div
+          className={`flex ${isRow ? "flex-col md:flex-row" : isCol ? "flex-col" : ""}`}
+        >
           <div
-            className={`basis-full ${isRow ? "" : isCol ? "mx-auto mb-3" : ""}`}
+            className={`mb-3 basis-full ${isRow ? "mx-auto md:mx-0 md:mb-0" : isCol ? "mx-auto" : ""}`}
           >
             <h2
-              className={`text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl ${title_m_width}`}
+              className={`text-2xl leading-tight font-semibold tracking-tight md:text-3xl lg:text-4xl ${title_m_width}`}
             >
               {title}
             </h2>
