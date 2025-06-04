@@ -29,12 +29,12 @@ body {
 
 .section {
   padding-top: 4rem;
-  margin-inline: 1rem;
+  padding-inline: 1rem;
   scroll-margin-top: 50px;
 
   /* `md` -	48rem (768px) */
   @media (width >= 48rem) {
-    margin-inline: 2rem;
+    padding-inline: 2rem;
   }
 
   /* `lg` 64rem (1024px) */
