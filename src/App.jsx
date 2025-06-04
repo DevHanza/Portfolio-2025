@@ -6,7 +6,6 @@ import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
 import Experience from "./sections/Experience/Experience";
-import LogoCarousel from "./sections/LogoCarousel/LogoCarousel";
 import Contact from "./sections/Contact/Contact";
 import BackToTopButton from "./components/Buttons/BackToTopButton";
 import Footer from "./sections/Footer/Footer";
@@ -32,9 +31,7 @@ function App() {
 
       <Skills />
 
-      {/* <Experience /> */}
-
-      {/* <LogoCarousel /> */}
+      <Experience />
 
       {/* <Contact /> */}
 
