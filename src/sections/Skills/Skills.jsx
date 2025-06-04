@@ -14,16 +14,21 @@ function Skills() {
           title_m_width=""
         />
 
-        <div className="flex flex-col gap-16">
-          <div className="flex gap-3">
+        <div className="flex flex-col gap-8 md:gap-16">
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3">
             <SkillCard title="JavaScript" name="js" />
             <SkillCard title="TypeScript" name="ts" />
             <SkillCard title="React" name="react" />
-            <SkillCard title="Angular" name="angular" />
-            <SkillCard title="CSS" name="css" />
+
+            <div className="">
+              <SkillCard title="Angular" name="angular" />
+            </div>
+            <div className="col-span-2 md:col-auto">
+              <SkillCard title="CSS" name="css" />
+            </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             <SkillCardMini name="html5" title="HTML" />
             <SkillCardMini name="bootstrap" title="Bootstrap" />
             <SkillCardMini name="sass" title="SASS" />
@@ -37,6 +42,7 @@ function Skills() {
             <SkillCardMini name="php" title="PHP" />
             <SkillCardMini name="wordpress" type="plain" title="WordPress" />
             <SkillCardMini name="figma" title="Figma" />
+            <SkillCardMini name="photoshop" title="Photoshop" />
           </div>
         </div>
       </div>
@@ -64,7 +70,7 @@ function SkillCard({ name = "js", title = "JavaScript", theme = "light" }) {
 
 function SkillCardMini({ name = "html", title, type = "original" }) {
   return (
-    <div className="flex cursor-pointer rounded-lg border-1 border-stone-100 bg-white p-3 transition-all duration-200 ease-in-out hover:scale-110">
+    <div className="flex cursor-pointer rounded-lg border-1 border-stone-100 bg-white p-3 transition-all duration-200 ease-in-out hover:scale-95">
       <img
         className="h-11"
         src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-${type}.svg`}
