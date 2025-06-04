@@ -1,5 +1,91 @@
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
+
 function Experience() {
-  return <div>Experience</div>;
+  return (
+    <section id="experience" className="section">
+      <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
+        <SectionHeading
+          label="Experience"
+          title="Where I’ve Been & What I’ve Done"
+          title_text="This is how I've spent the past few years — helping businesses grow through my skills and making the web a better place."
+          direction="row"
+          text_m_width=""
+          title_m_width="max-w-70"
+        />
+
+        <div className="flex flex-col gap-8 md:flex-row md:gap-0">
+          <h3 className="text-center text-xl font-medium tracking-tight md:hidden">
+            Experience
+          </h3>
+
+          <div className="flex flex-1 flex-col gap-2 md:gap-4">
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+          </div>
+
+          <div className="relative my-12 hidden w-12 flex-col justify-between md:flex">
+            <span className="absolute left-1/2 h-full w-[3px] -translate-x-1/2 bg-stone-200"></span>
+
+            <div className="relative">
+              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
+              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
+            </div>
+
+            <div className="relative">
+              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
+              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
+            </div>
+
+            <div className="relative">
+              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
+              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
+            </div>
+
+            <div className="relative">
+              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
+              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
+            </div>
+          </div>
+
+          <h3 className="text-center text-xl font-medium tracking-tight md:hidden">
+            Education
+          </h3>
+
+          <div className="flex flex-1 flex-col gap-2 md:gap-4">
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+            <ExperienceCard />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Experience;
+
+function ExperienceCard({
+  title = "Web Developer",
+  loc = "IFS",
+  logo = "logo.png",
+}) {
+  return (
+    <div className="flex flex-row items-start gap-5 rounded-xl bg-stone-100 px-4 py-4.5">
+      <img
+        className="max-h-16 rounded-lg"
+        src={`./${logo}`}
+        alt={`Logo of ${loc}`}
+      />
+      <div className="">
+        <h6 className="text-lg font-medium">{title}</h6>
+        <p className="text-sm text-[var(--primary-mid-blue)]">{loc}</p>
+        <p className="text-sm text-[var(--primary-dark-blue)]/75">
+          Mar 2025 - Present · 3 mos
+        </p>
+      </div>
+    </div>
+  );
+}
