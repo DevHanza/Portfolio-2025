@@ -40,6 +40,6 @@ body {
   /* `lg` 64rem (1024px) */
   @media (width >= 64rem) {
     margin-inline: 0;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
   }
 }
