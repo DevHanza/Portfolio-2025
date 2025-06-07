@@ -17,7 +17,7 @@ function SectionHeading({
     >
       <SectionLabel text={label} />
 
-      <div className="items-center pt-4 lg:pt-6">
+      <div className="items-center pt-6">
         <div
           className={`flex ${isRow ? "flex-col md:flex-row" : isCol ? "flex-col" : ""}`}
         >
