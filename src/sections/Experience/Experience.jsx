@@ -72,7 +72,7 @@ function ExperienceCard({
   title = "Web Developer",
   loc = "IFS",
   logo = "logo.png",
-  from = "2025-01-01",
+  from = "2018-01-01",
   to = "today",
 }) {
   useEffect(() => {
