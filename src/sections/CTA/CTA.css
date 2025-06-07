@@ -1,0 +1,10 @@
+.cta {
+  background:
+    linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 20%)),
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 20%) 0%,
+      rgba(255, 255, 255, 0%) 65%
+    ),
+    linear-gradient(#040826, #040826);
+}
