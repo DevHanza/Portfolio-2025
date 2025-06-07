@@ -33,10 +33,9 @@ function App() {
 
       <Experience />
 
-      <CTA />
+      <Footer />
 
       <BackToTopButton />
-      <Footer />
     </>
   );
 }
