@@ -6,12 +6,12 @@ import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
 import Experience from "./sections/Experience/Experience";
-import Contact from "./sections/Contact/Contact";
+import CTA from "./sections/CTA/CTA";
 import BackToTopButton from "./components/Buttons/BackToTopButton";
 import Footer from "./sections/Footer/Footer";
 
 export const NavItems = [
-  { linkName: "Home", url: "/" },
+  { linkName: "Home", url: "/#hero" },
   { linkName: "Projects", url: "#projects" },
   { linkName: "Skills", url: "#skills" },
   { linkName: "Experience", url: "#experience" },
@@ -33,7 +33,7 @@ function App() {
 
       <Experience />
 
-      {/* <Contact /> */}
+      <CTA />
 
       <BackToTopButton />
       <Footer />
