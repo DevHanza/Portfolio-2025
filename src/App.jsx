@@ -15,7 +15,7 @@ export const NavItems = [
   { linkName: "Projects", url: "#projects" },
   { linkName: "Skills", url: "#skills" },
   { linkName: "Experience", url: "#experience" },
-  { linkName: "Contact", url: "#contact" },
+  { linkName: "Contact", url: "#cta" },
 ];
 
 function App() {
