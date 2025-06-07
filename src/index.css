@@ -19,7 +19,7 @@
 html {
   scroll-behavior: smooth;
   cursor:
-    url("../public/cursors/cursor.png") 2 2,
+    url("/cursors/cursor.png") 2 2,
     auto;
 }
 
@@ -28,7 +28,7 @@ a *,
 button,
 .cursor-pointer {
   cursor:
-    url("../public/cursors/pointer.png") 2 2,
+    url("/cursors/pointer.png") 2 2,
     pointer !important;
 }
 
