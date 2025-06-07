@@ -5,8 +5,8 @@ function Hero() {
   return (
     <section id="hero" className="section">
       <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
-        <div className="hero-content flex flex-col justify-between gap-12 text-center md:flex-row md:gap-0 md:text-start">
-          <div className="flex flex-col justify-center">
+        <div className="hero-content flex flex-col justify-between gap-12 text-center md:flex-row md:gap-8 md:text-start">
+          <div className="flex basis-1/2 flex-col justify-center">
             <h1 className="text-4xl font-semibold tracking-tighter md:mb-1 md:text-5xl lg:text-6xl">
               Hansana Prabath
             </h1>
@@ -20,9 +20,9 @@ function Hero() {
               />
             </div>
 
-            <div className="mx-auto mb-9 max-w-[85%] text-[var(--primary-dark-blue)]/75 md:mx-0 md:max-w-[75%] md:text-lg lg:max-w-[65%]">
+            <div className="mx-auto mb-9 max-w-[85%] text-[var(--primary-dark-blue)]/75 md:mx-0 md:max-w-[90%] md:text-lg lg:max-w-[90%]">
               <p className="inline leading-6 tracking-tight">
-                Developer who fell in love with programming around 2019, driven
+                Developer who fell in love with programming since 2019, driven
                 by passion.
               </p>
             </div>
@@ -45,7 +45,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hero-image flex content-center">
+          <div className="hero-image flex basis-1/2 content-center md:justify-end">
             <img
               src="./hanza-blurred.png"
               alt="Portrait Image of Hansana."
