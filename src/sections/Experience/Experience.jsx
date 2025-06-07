@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 
 function Experience() {
@@ -22,7 +23,7 @@ function Experience() {
             <ExperienceCard />
             <ExperienceCard />
             <ExperienceCard />
-            <ExperienceCard />
+            <ExperienceCard to="2025-06-01" />
           </div>
 
           <div className="relative my-12 hidden w-12 flex-col justify-between md:flex">
@@ -71,7 +72,21 @@ function ExperienceCard({
   title = "Web Developer",
   loc = "IFS",
   logo = "logo.png",
+  from = "2025-01-01",
+  to = "today",
 }) {
+  useEffect(() => {
+    setExpTime(calcDate(startDate, endDate));
+  }, []);
+
+  const [expTime, setExpTime] = useState();
+
+  const startDate = new Date(from);
+  const endDate = to === "today" ? new Date() : new Date(to);
+
+  const startDateString = formatExpDate(startDate);
+  const endDateString = to === "today" ? "Present" : formatExpDate(endDate);
+
   return (
     <div className="flex flex-row items-start gap-5 rounded-xl bg-stone-100 px-4 py-4.5">
       <img
@@ -83,9 +98,26 @@ function ExperienceCard({
         <h6 className="text-lg font-medium">{title}</h6>
         <p className="text-sm text-[var(--primary-mid-blue)]">{loc}</p>
         <p className="text-sm text-[var(--primary-dark-blue)]/75">
-          Mar 2025 - Present · 3 mos
+          {startDateString} - {endDateString} · {expTime}
         </p>
       </div>
     </div>
   );
+}
+
+function calcDate(startDate, endDate) {
+  let monthsDiff = endDate.getMonth() - startDate.getMonth();
+  let yearsDiff = endDate.getFullYear() - startDate.getFullYear();
+
+  if (yearsDiff < 1) {
+    return `${monthsDiff} mos`;
+  }
+
+  return `${yearsDiff} yrs ${monthsDiff} mos`;
+}
+
+function formatExpDate(date) {
+  const month = date.toLocaleString("default", { month: "short" });
+  const year = date.getFullYear();
+  return `${month} ${year}`;
 }
