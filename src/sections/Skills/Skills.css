@@ -20,7 +20,7 @@
   }
 
   .tooltip {
-    /* visibility: hidden; */
+    visibility: hidden;
     --tooltip-bg: rgba(0, 0, 0, 0.75);
     position: absolute;
     bottom: 120%;
