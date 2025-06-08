@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
 import { NavItems } from "../../App";
 import HoverBtnWrapper from "../../components/Buttons/HoverBtnWrapper";
@@ -7,16 +7,32 @@ import ArrowUpRightStrokeIcon from "../../assets/svg/arrow-up-right-stroke";
 import MenuWiderIcon from "../../assets/svg/menu";
 
 function Header() {
+  // Mobile Header Button Toggle
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   const toggleMenu = () => {
     setIsHeaderVisible(!isHeaderVisible);
   };
 
+  // Change Nav Styles on Scroll
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollHeader);
+    // cleanup
+    return () => window.removeEventListener("scroll", handleScrollHeader);
+  }, []);
+
+  const handleScrollHeader = () => {
+    setHeaderScrolled(window.scrollY > 50);
+  };
+
   return (
-    <header className="z-100 flex h-auto flex-col items-center justify-center bg-white">
+    <header
+      className={`z-100 flex h-auto flex-col items-center justify-center ${headerScrolled ? "scrolled bg-white/80 backdrop-blur-[5px]" : "bg-white"}`}
+    >
       <div className="container mx-auto max-w-[var(--container-width)]">
-        <div className="flex w-full flex-wrap justify-between px-4 py-2 md:px-8 lg:px-0 lg:py-4">
+        <div className="flex w-full flex-wrap justify-between px-4 py-2 md:px-8 lg:px-0 lg:py-3">
           <span className="menu-title basis-1/2 content-center text-base font-semibold tracking-tighter text-[var(--primary-dark-blue)] md:text-lg lg:basis-auto">
             <a href="/">DevHanza</a>
           </span>

@@ -3,10 +3,23 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-}
 
+  button,
+  nav ul {
+    /* transition: all 0.2s; */
+    transition: all var(--spring-duration) var(--spring-easing);
+  }
+
+  &.scrolled button {
+    padding: 4px 16px;
+  }
+
+  &.scrolled nav ul {
+    gap: 0;
+  }
+}
 .nav-links {
-  transition: all 0.2s ease-in-out;
+  transition: all var(--spring-duration) var(--spring-easing);
   overflow: clip;
 }
 
