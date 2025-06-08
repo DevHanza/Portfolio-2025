@@ -77,7 +77,7 @@ function SkillCardMini({ name = "html", title, type = "original" }) {
         alt={title}
       />
 
-      <span class="tooltip">{title}</span>
+      <span className="tooltip">{title}</span>
     </div>
   );
 }
