@@ -10,6 +10,7 @@ import CTA from "./sections/CTA/CTA";
 import BackToTopButton from "./components/Buttons/BackToTopButton";
 import Footer from "./sections/Footer/Footer";
 
+// Nav Items
 export const NavItems = [
   { linkName: "Home", url: "/#hero" },
   { linkName: "Projects", url: "#projects" },
