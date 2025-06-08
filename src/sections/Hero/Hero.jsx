@@ -3,7 +3,7 @@ import SocialButtons from "../../components/SocialButtons";
 
 function Hero() {
   return (
-    <section id="hero" className="section">
+    <section id="hero" className="px-[1rem] pt-[5rem] md:px-[2rem] lg:px-0">
       <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
         <div className="hero-content flex flex-col justify-between gap-12 text-center md:flex-row md:gap-8 md:text-start">
           <div className="flex basis-1/2 flex-col justify-center">
