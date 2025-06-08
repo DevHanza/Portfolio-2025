@@ -14,4 +14,33 @@
     /* margin-inline: 0;
     scroll-margin-top: 100px; */
   }
+
+  .skill-card-mini:hover .tooltip {
+    visibility: visible;
+  }
+
+  .tooltip {
+    visibility: hidden;
+    --tooltip-bg: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    font-size: 0.875rem;
+    transform: translateX(-50%);
+    background-color: var(--tooltip-bg);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: var(--tooltip-bg) transparent transparent transparent;
+    }
+  }
 }

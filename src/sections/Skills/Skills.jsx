@@ -70,12 +70,14 @@ function SkillCard({ name = "js", title = "JavaScript", theme = "light" }) {
 
 function SkillCardMini({ name = "html", title, type = "original" }) {
   return (
-    <div className="flex cursor-pointer rounded-lg border-1 border-stone-100 bg-white p-3 transition-all duration-200 ease-in-out hover:scale-95">
+    <div className="skill-card-mini relative flex cursor-pointer rounded-lg border-1 border-stone-100 bg-white p-3 transition-all duration-200 ease-in-out">
       <img
         className="h-11"
         src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-${type}.svg`}
         alt={title}
       />
+
+      <span class="tooltip">{title}</span>
     </div>
   );
 }
