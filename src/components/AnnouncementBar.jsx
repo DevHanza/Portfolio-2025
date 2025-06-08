@@ -6,7 +6,7 @@ export default function AnnouncementBar() {
   if (!showBanner) return null;
 
   return (
-    <div className="sticky top-0 left-0 w-full bg-[var(--primary-dark-blue)] px-4 py-2 text-white md:px-0">
+    <div className="relative w-full bg-[var(--primary-dark-blue)] px-4 py-2 text-white md:px-0">
       <p className="max-w-85 text-sm sm:max-w-[90%] md:mx-auto md:max-w-[80%] md:text-center md:text-base">
         🚧 Pardon the Dust —{" "}
         <span className="font-medium">A Fresh New Look is Coming!</span>
