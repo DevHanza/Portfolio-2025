@@ -6,16 +6,18 @@ header {
 
   button,
   nav ul {
-    /* transition: all 0.2s; */
     transition: all var(--spring-duration) var(--spring-easing);
   }
 
-  &.scrolled button {
-    padding: 4px 16px;
-  }
+  /* `lg` 64rem (1024px) */
+  @media (width >= 64rem) {
+    &.scrolled button {
+      padding: 4px 16px;
+    }
 
-  &.scrolled nav ul {
-    gap: 0;
+    &.scrolled nav ul {
+      gap: 0;
+    }
   }
 }
 .nav-links {
