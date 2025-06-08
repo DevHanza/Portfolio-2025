@@ -20,7 +20,7 @@
   }
 
   .tooltip {
-    visibility: hidden;
+    /* visibility: hidden; */
     --tooltip-bg: rgba(0, 0, 0, 0.75);
     position: absolute;
     bottom: 120%;
@@ -37,7 +37,7 @@
       position: absolute;
       top: 100%;
       left: 50%;
-      margin-left: -5px;
+      transform: translateX(-50%);
       border-width: 5px;
       border-style: solid;
       border-color: var(--tooltip-bg) transparent transparent transparent;
