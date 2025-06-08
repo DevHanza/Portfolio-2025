@@ -54,7 +54,7 @@ export default Skills;
 
 function SkillCard({ name = "js", title = "JavaScript", theme = "light" }) {
   return (
-    <div className="flex w-full cursor-pointer flex-col gap-6 rounded-xl bg-white px-3 py-4 text-center transition-all duration-200 ease-in-out hover:scale-95">
+    <div className="skill-card flex w-full cursor-pointer flex-col gap-6 rounded-xl bg-white px-3 py-4 text-center hover:scale-95">
       <img
         className="h-16"
         src={`https://go-skill-icons.vercel.app/api/icons?i=${name}&theme=${theme}`}
