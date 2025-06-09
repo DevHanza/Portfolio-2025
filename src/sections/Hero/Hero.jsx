@@ -64,10 +64,10 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex items-center gap-10 lg:gap-14">
+        <div className="fade-in flex items-center gap-10 lg:gap-14">
           <hr className="flex-grow text-gray-300" />
 
-          <div className="fade-in flex flex-col items-center gap-4 text-center text-base font-medium tracking-tight text-stone-500 capitalize">
+          <div className="flex flex-col items-center gap-4 text-center text-base font-medium tracking-tight text-stone-500 capitalize">
             <p>Stay connected — follow me!</p>
             <SocialButtons
               size="lg:h-8 lg:w-8 h-7 w-7"
