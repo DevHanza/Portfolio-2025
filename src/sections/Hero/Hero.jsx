@@ -1,19 +1,48 @@
 import { Button } from "../../components/Buttons/Buttons";
 import SocialButtons from "../../components/SocialButtons";
-import { useEffect } from "react";
+import { useRef, useEffect, use } from "react";
 
-import { SlideInUp, SlideInRight } from "../../transitions/SlideIn";
-import { FadeIn } from "../../transitions/FadeIn";
+import { SlideInUp, SlideInRight } from "../../transitions/Slide";
+import { FadeIn } from "../../transitions/Fade";
+
+// GSAP
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(useGSAP);
 
 function Hero() {
-  useEffect(() => {
-    SlideInUp(".slide-in-up");
-    SlideInRight(".slide-in-right");
-    FadeIn(".fade-in", { delay: "1" });
-  }, []);
+  const heroContainerRef = useRef();
+  const heroTimeline = useRef();
+
+  useGSAP(
+    () => {
+      heroTimeline.current = gsap.timeline({
+        defaults: { ease: "power1.out" },
+      });
+
+      heroTimeline.current.add(
+        SlideInUp(".slide-in-up", { start: "top 100%" }),
+        SlideInRight(".slide-in-right"),
+      );
+
+      heroTimeline.current.add(FadeIn(".fade-in"));
+
+      // SlideInUp(".slide-in-up", { start: "top 100%" });
+      // SlideInRight(".slide-in-right");
+    },
+    {
+      scope: heroContainerRef, // Limits selector to children of container
+      dependencies: [], // Run once after mount
+      revertOnUpdate: false, // optional
+    },
+  );
 
   return (
-    <section id="hero" className="px-[1rem] pt-[5rem] md:px-[2rem] lg:px-0">
+    <section
+      id="hero"
+      className="px-[1rem] pt-[5rem] md:px-[2rem] lg:px-0"
+      ref={heroContainerRef}
+    >
       <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
         <div className="hero-content flex flex-col justify-between gap-12 text-center md:flex-row md:gap-8 md:text-start">
           <div className="flex basis-1/2 flex-col justify-center">

@@ -2,8 +2,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function SlideInUp(target, options = {}) {
-  gsap.fromTo(
+export function SlideInUp(target, scrollTriggerOptions = {}, options = {}) {
+  return gsap.fromTo(
     target,
     { y: "50%", opacity: 0, filter: "blur(8px)" },
     {
@@ -15,10 +15,12 @@ export function SlideInUp(target, options = {}) {
       stagger: 0.2,
       scrollTrigger: {
         trigger: target,
-        start: "top 90%",
+        start: "top 40%",
         toggleActions: "play none none none",
+        markers: true,
+        ...scrollTriggerOptions,
       },
-      ease: "power3.out",
+      // ease: "power3.out",
       ...options,
     },
   );
