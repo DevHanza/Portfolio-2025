@@ -17,23 +17,20 @@ export function SlideInUp(target, scrollTriggerOptions = {}, options = {}) {
         trigger: target,
         start: "top 40%",
         toggleActions: "play none none none",
-        markers: true,
         ...scrollTriggerOptions,
       },
-      // ease: "power3.out",
       ...options,
     },
   );
 }
 
-export function SlideInRight(target, options = {}) {
+export function SlideInRight(target, scrollTriggerOptions = {}, options = {}) {
   gsap.fromTo(
     target,
     { x: "50%", opacity: 0, filter: "blur(8px)" },
     {
       x: 0,
       y: 0,
-
       filter: "blur(0px)",
       opacity: 1,
       duration: 0.8,
@@ -42,8 +39,8 @@ export function SlideInRight(target, options = {}) {
         trigger: target,
         start: "top 90%",
         toggleActions: "play none none none",
+        ...scrollTriggerOptions,
       },
-      ease: "power3.out",
       ...options,
     },
   );

@@ -2,8 +2,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function FadeIn(target, options = {}) {
-  gsap.fromTo(
+export function FadeIn(target, scrollTriggerOptions = {}, options = {}) {
+  return gsap.fromTo(
     target,
     { opacity: 0 },
     {
@@ -14,8 +14,8 @@ export function FadeIn(target, options = {}) {
         trigger: target,
         start: "top 90%",
         toggleActions: "play none none none",
+        ...scrollTriggerOptions,
       },
-      ease: "power3.out",
       ...options,
     },
   );
