@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { NavItems } from "../../App";
 import HoverBtnWrapper from "../../components/Buttons/HoverBtnWrapper";
@@ -6,7 +6,31 @@ import { Button } from "../../components/Buttons/Buttons";
 import ArrowUpRightStrokeIcon from "../../assets/svg/arrow-up-right-stroke";
 import MenuWiderIcon from "../../assets/svg/menu";
 
+import { FadeIn } from "../../transitions/Fade";
+
+// GSAP
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(useGSAP);
+
 function Header() {
+  // Navigation Animation on Load
+  const headerRef = useRef();
+  const headerTimeline = useRef();
+
+  useGSAP(
+    () => {
+      headerTimeline.current = gsap.timeline();
+
+      headerTimeline.current.add(FadeIn(".fade-in"));
+    },
+    {
+      scope: headerRef,
+      dependencies: [],
+      revertOnUpdate: false,
+    },
+  );
+
   // Mobile Header Button Toggle
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
@@ -19,7 +43,7 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollHeader);
-    // cleanup
+
     return () => window.removeEventListener("scroll", handleScrollHeader);
   }, []);
 
@@ -29,9 +53,10 @@ function Header() {
 
   return (
     <header
+      ref={headerRef}
       className={`z-100 flex h-auto flex-col items-center justify-center ${headerScrolled ? "scrolled bg-white/80 backdrop-blur-[5px]" : "bg-white"}`}
     >
-      <div className="container mx-auto max-w-[var(--container-width)]">
+      <div className="fade-in container mx-auto max-w-[var(--container-width)]">
         <div className="flex w-full flex-wrap justify-between px-4 py-2 md:px-8 lg:px-0 lg:py-3">
           <span className="menu-title basis-1/2 content-center text-base font-semibold tracking-tighter text-[var(--primary-dark-blue)] md:text-lg lg:basis-auto">
             <a href="/">DevHanza</a>
