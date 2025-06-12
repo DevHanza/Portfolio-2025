@@ -16,19 +16,12 @@ function Hero() {
 
   useGSAP(
     () => {
-      heroTimeline.current = gsap.timeline({
-        defaults: { ease: "power1.out" },
-      });
+      heroTimeline.current = gsap.timeline();
 
-      heroTimeline.current.add(
-        SlideInUp(".slide-in-up", { start: "top 100%" }),
-        SlideInRight(".slide-in-right"),
-      );
-
-      heroTimeline.current.add(FadeIn(".fade-in"));
-
-      // SlideInUp(".slide-in-up", { start: "top 100%" });
-      // SlideInRight(".slide-in-right");
+      heroTimeline.current
+        .add(SlideInUp(".slide-in-up", { start: "top 100%" }))
+        .add(SlideInRight(".slide-in-right"))
+        .add(FadeIn(".fade-in"));
     },
     {
       scope: heroContainerRef, // Limits selector to children of container
