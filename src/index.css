@@ -50,7 +50,7 @@
 html {
   scroll-behavior: smooth;
   cursor:
-    url("/cursors/cursor.png") 2 2,
+    url("/cursors/cursor.png") 0 0,
     auto;
 }
 
@@ -59,7 +59,7 @@ a *,
 button,
 .cursor-pointer {
   cursor:
-    url("/cursors/pointer.png") 2 2,
+    url("/cursors/pointer.png") 10 0,
     pointer !important;
 }
 
