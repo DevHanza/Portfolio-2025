@@ -1,32 +1,86 @@
-import { useEffect, useState } from "react";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import { useEffect, useState, useRef } from "react";
+
+// GSAP
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
+import { SlideInLeft, SlideInRight, SlideInUp } from "../../transitions/Slide";
+import { FadeIn } from "../../transitions/Fade";
 
 function Experience() {
-  return (
-    <section id="experience" className="section">
-      <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
-        <SectionHeading
-          label="Experience"
-          title="Where I’ve Been & What I’ve Done"
-          title_text="This is how I've spent the past few years — helping businesses grow through my skills and making the web a better place."
-          direction="row"
-          text_m_width=""
-          title_m_width="max-w-70"
-        />
+  const expContainerRef = useRef();
+  const expTimeline = useRef();
 
+  useGSAP(
+    () => {
+      expTimeline.current = gsap.timeline({
+        yoyo: true,
+        scrollTrigger: {
+          trigger: expContainerRef.current,
+          start: "top 50%",
+          markers: true,
+          toggleActions: "play none none none",
+        },
+      });
+
+      expTimeline.current
+        .add(
+          SlideInUp(expContainerRef.current.querySelectorAll(".slide-in-up")),
+        )
+        .add(
+          [
+            SlideInLeft(
+              expContainerRef.current.querySelectorAll(".slide-in-left"),
+            ),
+            SlideInRight(
+              expContainerRef.current.querySelectorAll(".slide-in-right"),
+            ),
+            FadeIn(expContainerRef.current.querySelectorAll(".fade-in")),
+          ],
+          "<",
+        );
+
+      return () => {
+        expTimeline.current.kill();
+      };
+    },
+    {
+      scope: expContainerRef, // Limits selector to children of container
+      dependencies: [], // Run once after mount
+      revertOnUpdate: false, // optional
+    },
+  );
+
+  return (
+    <section id="experience" className="section" ref={expContainerRef}>
+      <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
+        <div className="slide-in-up">
+          <SectionHeading
+            label="Experience"
+            title="Where I’ve Been & What I’ve Done"
+            title_text="This is how I've spent the past few years — helping businesses grow through my skills and making the web a better place."
+            direction="row"
+            text_m_width=""
+            title_m_width="max-w-70"
+          />
+        </div>
         <div className="flex flex-col gap-8 md:flex-row md:gap-0">
           <h3 className="text-center text-xl font-medium tracking-tight md:hidden">
             Experience
           </h3>
 
-          <div className="flex flex-1 flex-col gap-2 md:gap-4">
+          <div className="slide-in-left flex flex-1 flex-col gap-2 md:gap-4">
             <ExperienceCard />
             <ExperienceCard />
             <ExperienceCard />
             <ExperienceCard to="2025-06-01" />
           </div>
 
-          <div className="relative my-12 hidden w-12 flex-col justify-between md:flex">
+          <div className="fade-in relative my-12 hidden w-12 flex-col justify-between md:flex">
             <span className="absolute left-1/2 h-full w-[3px] -translate-x-1/2 bg-stone-200"></span>
 
             <div className="relative">
@@ -54,7 +108,7 @@ function Experience() {
             Education
           </h3>
 
-          <div className="flex flex-1 flex-col gap-2 md:gap-4">
+          <div className="slide-in-right flex flex-1 flex-col gap-2 md:gap-4">
             <ExperienceCard />
             <ExperienceCard />
             <ExperienceCard />
@@ -79,7 +133,7 @@ function ExperienceCard({
     setExpTime(calcDate(startDate, endDate));
   }, []);
 
-  const [expTime, setExpTime] = useState();
+  const [expTime, setExpTime] = useState("0 mos");
 
   const startDate = new Date(from);
   const endDate = to === "today" ? new Date() : new Date(to);
