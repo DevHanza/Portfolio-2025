@@ -28,6 +28,8 @@ function Skills() {
       skillsTimeline.current.add(
         SlideInUp(skillsContainerRef.current.querySelectorAll(".slide-in-up")),
       );
+
+      return () => skillsTimeline.current.kill();
     },
     {
       scope: skillsContainerRef, // Limits selector to children of container

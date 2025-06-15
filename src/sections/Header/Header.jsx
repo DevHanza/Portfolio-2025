@@ -32,6 +32,8 @@ function Header() {
       headerTimeline.current.add(
         FadeIn(headerRef.current.querySelectorAll(".fade-in")),
       );
+
+      return () => headerTimeline.current.kill();
     },
     {
       scope: headerRef,

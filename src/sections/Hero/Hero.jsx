@@ -43,6 +43,8 @@ function Hero({ heroPlayDone }) {
           ),
         )
         .add(FadeIn(heroContainerRef.current.querySelectorAll(".fade-in")));
+
+      return () => heroTimeline.current.kill();
     },
     {
       scope: heroContainerRef, // Limits selector to children of container
