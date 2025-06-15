@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function SlideInUp(target, options = {}) {
+export const SlideInUp = (target, options = {}) => {
   return gsap.from(target, {
     y: "50%",
     opacity: 0,
@@ -11,9 +11,9 @@ export function SlideInUp(target, options = {}) {
     stagger: 0.2,
     ...options,
   });
-}
+};
 
-export function SlideInRight(target, options = {}) {
+export const SlideInRight = (target, options = {}) => {
   gsap.from(target, {
     x: "50%",
     opacity: 0,
@@ -22,9 +22,9 @@ export function SlideInRight(target, options = {}) {
     stagger: 0.2,
     ...options,
   });
-}
+};
 
-export function SlideInLeft(target, options = {}) {
+export const SlideInLeft = (target, options = {}) => {
   gsap.from(target, {
     x: "-50%",
     opacity: 0,
@@ -33,4 +33,4 @@ export function SlideInLeft(target, options = {}) {
     stagger: 0.2,
     ...options,
   });
-}
+};
