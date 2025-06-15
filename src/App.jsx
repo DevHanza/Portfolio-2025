@@ -23,9 +23,9 @@ function App() {
   const [isHeroPlayDone, setIsHeroPlayDone] = useState(false);
 
   const handleheroPlayDone = () => {
-    console.log("hero Play is Done!");
     setIsHeroPlayDone(true);
   };
+
   return (
     <>
       <AnnouncementBar />
