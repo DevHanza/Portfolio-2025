@@ -18,7 +18,6 @@ function Experience() {
   useGSAP(
     () => {
       expTimeline.current = gsap.timeline({
-        yoyo: true,
         scrollTrigger: {
           trigger: expContainerRef.current,
           start: "top 50%",
