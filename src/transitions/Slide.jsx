@@ -7,7 +7,7 @@ export function SlideInUp(target, options = {}) {
     y: "50%",
     opacity: 0,
     filter: "blur(8px)",
-    duration: 0.8,
+    duration: 0.5,
     stagger: 0.2,
     ...options,
   });
@@ -18,7 +18,7 @@ export function SlideInRight(target, options = {}) {
     x: "50%",
     opacity: 0,
     filter: "blur(8px)",
-    duration: 0.8,
+    duration: 0.5,
     stagger: 0.2,
     ...options,
   });
