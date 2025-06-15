@@ -1,7 +1,6 @@
 import { NavItems } from "../../App";
 import SocialButtons from "../../components/SocialButtons";
 import PulseDot from "../../components/pulseDot/pulseDot";
-import HoverBtnWrapper from "../../components/Buttons/HoverBtnWrapper";
 import CTA from "../CTA/CTA";
 import "./Footer.css";
 
