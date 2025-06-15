@@ -49,8 +49,7 @@ function Projects({ isHeroPlayDone }) {
 
   useGSAP(() => {
     // Play the Project'd timeline when Hero Section GSAP timeline is done
-    console.log("isHeroPlayDone: ", isHeroPlayDone);
-    
+
     if (isHeroPlayDone && projectsTimeline.current) {
       projectsTimeline.current.play();
     }
