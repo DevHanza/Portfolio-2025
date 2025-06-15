@@ -8,7 +8,9 @@ import { FadeIn } from "../../transitions/Fade";
 // GSAP
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function Hero() {
   const heroContainerRef = useRef();
@@ -16,17 +18,29 @@ function Hero() {
 
   useGSAP(
     () => {
-      heroTimeline.current = gsap.timeline();
+      heroTimeline.current = gsap.timeline({
+        scrollTrigger: {
+          trigger: heroContainerRef.current,
+          start: "top 50%",
+          markers: true,
+          toggleActions: "play none none none",
+        },
+      });
 
       heroTimeline.current
-        .add(SlideInUp(".slide-in-up", { start: "top 100%" }))
-        .add(SlideInRight(".slide-in-right"))
-        .add(FadeIn(".fade-in"));
+        .add(
+          SlideInUp(heroContainerRef.current.querySelectorAll(".slide-in-up")),
+        )
+        .add(
+          SlideInRight(
+            heroContainerRef.current.querySelectorAll(".slide-in-right1"),
+          ),
+        )
+        .add(FadeIn(heroContainerRef.current.querySelectorAll(".fade-in")));
     },
     {
       scope: heroContainerRef, // Limits selector to children of container
       dependencies: [], // Run once after mount
-      revertOnUpdate: false, // optional
     },
   );
 
