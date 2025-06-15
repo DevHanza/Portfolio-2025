@@ -1,20 +1,55 @@
 import "./Skills.css";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 
-function Skills() {
-  return (
-    <section id="skills" className="section">
-      <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
-        <SectionHeading
-          label="Skills"
-          title="What I Know"
-          title_text="Here are the tools I've used most over the past few years to build projects for my clients and myself."
-          direction="col"
-          text_m_width="max-w-120"
-          title_m_width=""
-        />
+import { useRef } from "react";
+import { SlideInUp, SlideInRight } from "../../transitions/Slide";
+// GSAP
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
-        <div className="flex flex-col gap-8 md:gap-16">
+function Skills() {
+  const skillsContainerRef = useRef();
+  const skillsTimeline = useRef();
+
+  useGSAP(
+    () => {
+      skillsTimeline.current = gsap.timeline({
+        scrollTrigger: {
+          trigger: skillsContainerRef.current,
+          markers: true,
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      skillsTimeline.current.add(
+        SlideInUp(skillsContainerRef.current.querySelectorAll(".slide-in-up")),
+      );
+    },
+    {
+      scope: skillsContainerRef, // Limits selector to children of container
+      dependencies: [], // Run once after mount
+    },
+  );
+
+  return (
+    <section id="skills" className="section" ref={skillsContainerRef}>
+      <div className="container mx-auto flex max-w-[var(--container-width)] flex-col gap-12">
+        <div className="slide-in-up">
+          <SectionHeading
+            label="Skills"
+            title="What I Know"
+            title_text="Here are the tools I've used most over the past few years to build projects for my clients and myself."
+            direction="col"
+            text_m_width="max-w-120"
+            title_m_width=""
+          />
+        </div>
+
+        <div className="slide-in-up flex flex-col gap-8 md:gap-16">
           <div className="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3">
             <SkillCard title="JavaScript" name="js" />
             <SkillCard title="TypeScript" name="ts" />
