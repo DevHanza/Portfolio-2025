@@ -8,7 +8,9 @@ import { SlideInUp } from "../../transitions/Slide";
 // GSAP
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
   const projectsContainerRef = useRef();
@@ -18,13 +20,17 @@ function Projects() {
     () => {
       projectsTimeline.current = gsap.timeline({
         scrollTrigger: {
+          trigger: projectsContainerRef.current,
+          start: "top 50%",
           markers: true,
+          toggleActions: "play none none none",
         },
       });
-
-      projectsTimeline.current.add(SlideInUp(".slide-in-up"), {
-        start: "top 50%",
-      });
+      projectsTimeline.current.add(
+        SlideInUp(
+          projectsContainerRef.current.querySelectorAll(".slide-in-up"),
+        ),
+      );
     },
     {
       scope: projectsContainerRef, // Limits selector to children of container
