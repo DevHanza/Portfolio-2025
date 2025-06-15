@@ -22,7 +22,7 @@ function Hero({ heroPlayDone }) {
         scrollTrigger: {
           trigger: heroContainerRef.current,
           start: "top 50%",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none none",
         },
         // Play

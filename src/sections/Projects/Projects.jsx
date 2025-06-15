@@ -23,7 +23,7 @@ function Projects({ isHeroPlayDone }) {
         scrollTrigger: {
           trigger: projectsContainerRef.current,
           start: "top 90%",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none none",
         },
       });

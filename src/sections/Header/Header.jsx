@@ -23,7 +23,7 @@ function Header() {
       headerTimeline.current = gsap.timeline({
         scrollTrigger: {
           trigger: headerRef.current,
-          markers: true,
+          // markers: true,
           start: "top 10%",
           toggleActions: "play none none none",
         },

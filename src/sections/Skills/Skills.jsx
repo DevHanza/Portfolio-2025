@@ -19,7 +19,7 @@ function Skills() {
       skillsTimeline.current = gsap.timeline({
         scrollTrigger: {
           trigger: skillsContainerRef.current,
-          markers: true,
+          // markers: true,
           start: "top 60%",
           toggleActions: "play none none none",
         },
