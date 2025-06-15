@@ -14,7 +14,7 @@ export const SlideInUp = (target, options = {}) => {
 };
 
 export const SlideInRight = (target, options = {}) => {
-  gsap.from(target, {
+  return gsap.from(target, {
     x: "50%",
     opacity: 0,
     filter: "blur(8px)",
@@ -25,7 +25,7 @@ export const SlideInRight = (target, options = {}) => {
 };
 
 export const SlideInLeft = (target, options = {}) => {
-  gsap.from(target, {
+  return gsap.from(target, {
     x: "-50%",
     opacity: 0,
     filter: "blur(8px)",
