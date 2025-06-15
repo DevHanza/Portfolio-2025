@@ -20,9 +20,18 @@ function Header() {
 
   useGSAP(
     () => {
-      headerTimeline.current = gsap.timeline();
+      headerTimeline.current = gsap.timeline({
+        scrollTrigger: {
+          trigger: headerRef.current,
+          markers: true,
+          start: "top 10%",
+          toggleActions: "play none none none",
+        },
+      });
 
-      headerTimeline.current.add(FadeIn(".fade-in"));
+      headerTimeline.current.add(
+        FadeIn(headerRef.current.querySelectorAll(".fade-in")),
+      );
     },
     {
       scope: headerRef,
