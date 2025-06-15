@@ -12,7 +12,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-function Hero() {
+function Hero({ heroPlayDone }) {
   const heroContainerRef = useRef();
   const heroTimeline = useRef();
 
@@ -25,6 +25,12 @@ function Hero() {
           markers: true,
           toggleActions: "play none none none",
         },
+        // Play
+        onComplete: () => {
+          if (heroPlayDone) {
+            heroPlayDone();
+          }
+        },
       });
 
       heroTimeline.current
@@ -33,7 +39,7 @@ function Hero() {
         )
         .add(
           SlideInRight(
-            heroContainerRef.current.querySelectorAll(".slide-in-right1"),
+            heroContainerRef.current.querySelectorAll(".slide-in-right"),
           ),
         )
         .add(FadeIn(heroContainerRef.current.querySelectorAll(".fade-in")));

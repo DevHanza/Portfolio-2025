@@ -8,6 +8,7 @@ import Skills from "./sections/Skills/Skills";
 import Experience from "./sections/Experience/Experience";
 import BackToTopButton from "./components/Buttons/BackToTopButton";
 import Footer from "./sections/Footer/Footer";
+import { useState } from "react";
 
 // Nav Items
 export const NavItems = [
@@ -19,15 +20,21 @@ export const NavItems = [
 ];
 
 function App() {
+  const [isHeroPlayDone, setIsHeroPlayDone] = useState(false);
+
+  function handleHeroPlayDone() {
+    setIsHeroPlayDone(true);
+  }
+
   return (
     <>
       <AnnouncementBar />
 
       <Header />
 
-      <Hero />
+      <Hero heroPlayDone={handleHeroPlayDone} />
 
-      <Projects />
+      <Projects isHeroDone={isHeroPlayDone} />
 
       <Skills />
 
