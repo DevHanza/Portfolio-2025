@@ -23,3 +23,14 @@ export function SlideInRight(target, options = {}) {
     ...options,
   });
 }
+
+export function SlideInLeft(target, options = {}) {
+  gsap.from(target, {
+    x: "-50%",
+    opacity: 0,
+    filter: "blur(8px)",
+    duration: 0.5,
+    stagger: 0.2,
+    ...options,
+  });
+}
