@@ -20,15 +20,21 @@ export const NavItems = [
 ];
 
 function App() {
+  const [isHeroPlayDone, setIsHeroPlayDone] = useState(false);
+
+  const handleheroPlayDone = () => {
+    console.log("hero Play is Done!");
+    setIsHeroPlayDone(true);
+  };
   return (
     <>
       <AnnouncementBar />
 
       <Header />
 
-      <Hero />
+      <Hero heroPlayDone={handleheroPlayDone} />
 
-      <Projects />
+      <Projects isHeroPlayDone={isHeroPlayDone} />
 
       <Skills />
 

@@ -12,7 +12,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-function Projects() {
+function Projects({ isHeroPlayDone }) {
   const projectsContainerRef = useRef();
   const projectsTimeline = useRef();
 
@@ -34,6 +34,8 @@ function Projects() {
         ),
       );
 
+      projectsTimeline.current.kill();
+
       return () => {
         projectsTimeline.current.kill();
       };
@@ -45,8 +47,14 @@ function Projects() {
     },
   );
 
-  // Play the Project'd timeline when Hero Section GSAP timeline is done
-
+  useGSAP(() => {
+    // Play the Project'd timeline when Hero Section GSAP timeline is done
+    console.log("isHeroPlayDone: ", isHeroPlayDone);
+    
+    if (isHeroPlayDone && projectsTimeline.current) {
+      projectsTimeline.current.play();
+    }
+  }, [isHeroPlayDone]);
 
   return (
     <section id="projects" className="section" ref={projectsContainerRef}>
