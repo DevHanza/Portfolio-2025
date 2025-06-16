@@ -35,13 +35,17 @@ function Hero({ heroPlayDone }) {
 
       heroTimeline.current
         .add(
-          SlideInUp(heroContainerRef.current.querySelectorAll(".slide-in-up")),
+          [
+            SlideInUp(
+              heroContainerRef.current.querySelectorAll(".slide-in-up"),
+            ),
+            SlideInRight(
+              heroContainerRef.current.querySelectorAll(".slide-in-right"),
+            ),
+          ],
+          "<",
         )
-        .add(
-          SlideInRight(
-            heroContainerRef.current.querySelectorAll(".slide-in-right"),
-          ),
-        )
+
         .add(FadeIn(heroContainerRef.current.querySelectorAll(".fade-in")));
 
       return () => heroTimeline.current.kill();
