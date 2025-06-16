@@ -71,7 +71,7 @@ export default Experience;
 function ExperienceCard({
   title = "Web Developer",
   loc = "IFS",
-  logo = "logo.png",
+  logo = "/logo.png",
   from = "2018-01-01",
   to = "today",
 }) {
@@ -91,7 +91,7 @@ function ExperienceCard({
     <div className="flex flex-row items-start gap-5 rounded-xl bg-stone-100 px-4 py-4.5">
       <img
         className="max-h-16 rounded-lg"
-        src={`./${logo}`}
+        src={`${logo}`}
         alt={`Logo of ${loc}`}
       />
       <div className="">

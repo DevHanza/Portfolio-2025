@@ -3,7 +3,7 @@ import "./MiniProjectCard.css";
 function MiniProjectsCard({
   title = "Calculator",
   ghLink = "https://github.com",
-  imgSrc = "./Project-Card-Image.png",
+  imgSrc = "/Project-Card-Image.png",
 }) {
   return (
     <div className="mini-project-card relative flex h-35 w-full flex-row overflow-hidden rounded-lg">
