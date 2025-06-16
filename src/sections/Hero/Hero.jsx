@@ -12,7 +12,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-function Hero({ heroPlayDone }) {
+function Hero() {
   const heroContainerRef = useRef();
   const heroTimeline = useRef();
 
@@ -24,12 +24,6 @@ function Hero({ heroPlayDone }) {
           start: "top 50%",
           // markers: true,
           toggleActions: "play none none none",
-        },
-        // Play
-        onComplete: () => {
-          if (heroPlayDone) {
-            heroPlayDone();
-          }
         },
       });
 

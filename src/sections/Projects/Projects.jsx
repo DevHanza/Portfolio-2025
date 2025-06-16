@@ -12,29 +12,28 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-function Projects({ isHeroPlayDone }) {
+function Projects() {
   const projectsContainerRef = useRef();
   const projectsTimeline = useRef();
 
   useGSAP(
     () => {
       projectsTimeline.current = gsap.timeline({
-        paused: true,
+        // paused: true,
         scrollTrigger: {
           trigger: projectsContainerRef.current,
-          start: "top 90%",
-          // markers: true,
+          start: "top 50%",
+          markers: true,
           toggleActions: "play none none none",
         },
       });
+      projectsTimeline.current.pause();
 
       projectsTimeline.current.add(
         SlideInUp(
           projectsContainerRef.current.querySelectorAll(".slide-in-up"),
         ),
       );
-
-      projectsTimeline.current.kill();
 
       return () => {
         projectsTimeline.current.kill();
@@ -46,14 +45,6 @@ function Projects({ isHeroPlayDone }) {
       revertOnUpdate: false, // optional
     },
   );
-
-  useGSAP(() => {
-    // Play the Project'd timeline when Hero Section GSAP timeline is done
-
-    if (isHeroPlayDone && projectsTimeline.current) {
-      projectsTimeline.current.play();
-    }
-  }, [isHeroPlayDone]);
 
   return (
     <section id="projects" className="section" ref={projectsContainerRef}>
