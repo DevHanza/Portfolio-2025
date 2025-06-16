@@ -8,7 +8,7 @@ function ProjectCard({
   desc = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
   ghLink = "https://github.com/DevHanza/",
   liveLink = "https://devhanza.github.io/",
-  imgSrc = "./Project-Card-Image.png",
+  imgSrc = "/Project-Card-Image.png",
 }) {
   return (
     <div className="project-card flex flex-col gap-4.5">
