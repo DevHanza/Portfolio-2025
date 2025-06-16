@@ -23,7 +23,7 @@ function Projects() {
         scrollTrigger: {
           trigger: projectsContainerRef.current,
           start: "top 50%",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none none",
         },
       });
