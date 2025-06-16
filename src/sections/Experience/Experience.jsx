@@ -21,7 +21,7 @@ function Experience() {
         scrollTrigger: {
           trigger: expContainerRef.current,
           start: "top 50%",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none none",
         },
       });

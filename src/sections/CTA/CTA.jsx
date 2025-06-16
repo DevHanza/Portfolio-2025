@@ -23,7 +23,7 @@ function CTA() {
         scrollTrigger: {
           trigger: ctaRef.current,
           start: "top 50%",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none none",
         },
       });
