@@ -32,7 +32,7 @@ function CTA() {
         .add(SlideInUp(ctaRef.current.querySelectorAll(".slide-in-up")))
         .add(
           FadeIn(ctaRef.current.querySelectorAll(".fade-in"), {
-            duration: 0.8,
+            duration: 0.4,
           }),
         );
 
