@@ -5,5 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/Portfolio-2025/", // Github Pages Base URL
+  base: "/", // Github Pages Base URL
 });
