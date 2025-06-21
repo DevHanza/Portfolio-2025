@@ -1,0 +1,21 @@
+.mini-project-card .gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0%) 30%,
+    rgba(0, 0, 0, 90%) 100%
+  );
+}
+
+.mini-project-card {
+  .mini-project-card-image {
+    transition: all 0.1s ease-in-out;
+    scale: 1;
+  }
+
+  &:hover .mini-project-card-image {
+    scale: 1.05;
+  }
+}

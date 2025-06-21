@@ -13,7 +13,7 @@ const miniProjectsList = [
     icon: "react",
   },
   {
-    title: " Searchable-Product-Data-Table",
+    title: " React-Product-Table",
     ghLink: "https://github.com/DevHanza/React-Mini-Projects",
     imgSrc: "/ProjectThumbs/mini/searchable-product-table.png",
     icon: "react",
@@ -131,10 +131,32 @@ function Projects() {
 
         <div className="flex flex-col gap-10">
           <div className="slide-in-up flex flex-col gap-8 md:flex-row md:gap-4 lg:gap-5">
-            {/* <ProjectCard ghLink="" liveLink="" imgSrc="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=600"/> */}
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            <ProjectCard
+              title="Cafesy"
+              desc="Responsive Website"
+              ghLink="https://github.com/DevHanza/cafesy"
+              liveLink="#"
+              imgSrc="ProjectThumbs/Cafesy.png"
+            />
+            <ProjectCard
+              ghLink=""
+              liveLink=""
+              imgSrc="ProjectThumbs/Hanzas.png"
+            />
+          </div>
+
+          <div className="slide-in-up flex flex-col gap-8 md:flex-row md:gap-4 lg:gap-5">
+            <ProjectCard
+              ghLink=""
+              liveLink=""
+              imgSrc="ProjectThumbs/SchoolNotes.png"
+            />
+
+            <ProjectCard
+              ghLink=""
+              liveLink=""
+              imgSrc="ProjectThumbs/TelegramYTDLBot.png"
+            />
           </div>
 
           <div className="slide-in-up">
