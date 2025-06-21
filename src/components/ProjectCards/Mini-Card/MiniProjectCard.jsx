@@ -8,7 +8,7 @@ function MiniProjectsCard({
 }) {
   return (
     <div className="mini-project-card relative flex h-35 w-full flex-row overflow-hidden rounded-lg">
-      <a href={ghLink} className="h-full w-full">
+      <a href={ghLink} className="h-full w-full" target="_blank">
         {/* Mini-Projects-Card */}
         <img src={imgSrc} alt={title} className="h-full w-full object-cover" />
 
