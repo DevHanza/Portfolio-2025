@@ -4,6 +4,7 @@ function MiniProjectsCard({
   title = "Calculator",
   ghLink = "https://github.com",
   imgSrc = "/Project-Card-Image.png",
+  icon = "react",
 }) {
   return (
     <div className="mini-project-card relative flex h-35 w-full flex-row overflow-hidden rounded-lg">
@@ -15,8 +16,8 @@ function MiniProjectsCard({
           <span>
             <img
               className="h-6"
-              src="https://go-skill-icons.vercel.app/api/icons?i=react&theme=light"
-              alt="React"
+              src={`https://go-skill-icons.vercel.app/api/icons?i=${icon}&theme=light`}
+              alt={`Image of ${icon} ${title} project`}
             />
           </span>
           <h4 className="text-base font-medium">{title}</h4>
