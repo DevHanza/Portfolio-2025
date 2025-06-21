@@ -5,6 +5,75 @@ import MiniProjectsCardSlider from "../../components/ProjectCards/MiniProjectsCa
 import { useRef } from "react";
 import { SlideInUp } from "../../transitions/Slide";
 
+const miniProjectsList = [
+  {
+    title: "Tic-Tac-Toe",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/tic-tac-toe.png",
+    icon: "react",
+  },
+  {
+    title: " Searchable-Product-Data-Table",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/searchable-product-table.png",
+    icon: "react",
+  },
+  {
+    title: "React Counter",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/react-counter.png",
+    icon: "react",
+  },
+  {
+    title: "React ToDo App",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/todo-react.png",
+    icon: "react",
+  },
+  {
+    title: "Meals API Project",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/meals-api-project.png",
+    icon: "react",
+  },
+  {
+    title: "React Calculator",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/react-calculator.png",
+    icon: "react",
+  },
+  {
+    title: "Background Toggler",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/react-background-toggler.png",
+    icon: "react",
+  },
+  {
+    title: "Hidden-Search-Bar",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/hidden-search-bar.png",
+    icon: "react",
+  },
+  {
+    title: "React Testimonials",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/react-testimonials.png",
+    icon: "react",
+  },
+  {
+    title: "React Accordions ",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/react-accordions.png",
+    icon: "react",
+  },
+  {
+    title: "React Form V1",
+    ghLink: "https://github.com/DevHanza/React-Mini-Projects",
+    imgSrc: "/ProjectThumbs/mini/react-form.png",
+    icon: "react",
+  },
+];
+
 // GSAP
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -69,7 +138,7 @@ function Projects() {
           </div>
 
           <div className="slide-in-up">
-            <MiniProjectsCardSlider />
+            <MiniProjectsCardSlider miniProjectsList={miniProjectsList} />
           </div>
         </div>
       </div>
