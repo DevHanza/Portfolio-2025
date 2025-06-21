@@ -71,6 +71,7 @@ function Skills() {
             <SkillCardMini name="sass" title="SASS" />
             <SkillCardMini name="tailwindcss" title="TailwindCSS" />
             <SkillCardMini name="git" title="Git" />
+            <SkillCardMini name="gsap" title="GSAP" />
             <SkillCardMini name="python" title="Python" />
             <SkillCardMini name="nodejs" title="Node.js" />
             <SkillCardMini name="mysql" title="MySQL" />
@@ -78,7 +79,9 @@ function Skills() {
             <SkillCardMini name="mongodb" title="MongoDB" />
             <SkillCardMini name="php" title="PHP" />
             <SkillCardMini name="wordpress" type="plain" title="WordPress" />
-            <SkillCardMini name="figma" title="Figma" />
+            <SkillCardMini name="framer" title="Framer" />
+            <SkillCardMini name="webflow" title="Webflow" />
+            <SkillCardMini name="webstudio" title="Webstudio" />
             <SkillCardMini name="photoshop" title="Photoshop" />
           </div>
         </div>
