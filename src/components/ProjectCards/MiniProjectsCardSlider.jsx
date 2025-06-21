@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useRef } from "react";
 
-function MiniProjectsCardSlider() {
+function MiniProjectsCardSlider({ miniProjectsList }) {
   const swiperRef = useRef(null);
 
   function handleNextSlide() {
@@ -66,9 +66,14 @@ function MiniProjectsCardSlider() {
             }}
             modules={[Autoplay]}
           >
-            {[...Array(6)].map((_, i) => (
-              <SwiperSlide key={i}>
-                <MiniProjectsCard />
+            {miniProjectsList.map((project, i) => (
+              <SwiperSlide key={`${project.title}_${i}`}>
+                <MiniProjectsCard
+                  title={project.title}
+                  ghLink={project.ghlink}
+                  imgSrc={project.imgSrc}
+                  icon={project.icon}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
