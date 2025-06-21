@@ -68,12 +68,7 @@ function MiniProjectsCardSlider({ miniProjectsList }) {
           >
             {miniProjectsList.map((project, i) => (
               <SwiperSlide key={`${project.title}_${i}`}>
-                <MiniProjectsCard
-                  title={project.title}
-                  ghLink={project.ghlink}
-                  imgSrc={project.imgSrc}
-                  icon={project.icon}
-                />
+                <MiniProjectsCard {...project} />
               </SwiperSlide>
             ))}
           </Swiper>
