@@ -22,17 +22,17 @@ function ProjectCard({
 
       <div className="px-2">
         <div className="flex items-start justify-between gap-5 md:gap-2 lg:gap-5">
-          <a href={ghLink} target="_blank">
+          <a href={ghLink} target="_blank" className="w-full">
             <h4 className="fill-[var(--primary-dark-blue)] text-lg leading-tight font-medium tracking-tight">
               {title}
             </h4>
+            <p className="mt-1 text-base tracking-tight text-[var(--primary-dark-blue)]/75 lg:mt-2">
+              {desc}
+            </p>
           </a>
+
           <ProjectCardLinks ghLink liveLink />
         </div>
-
-        <p className="mt-2 text-base tracking-tight text-[var(--primary-dark-blue)]/75">
-          {desc}
-        </p>
       </div>
     </div>
   );
@@ -42,16 +42,16 @@ export default ProjectCard;
 
 function ProjectCardLinks(ghLink, liveLink) {
   return (
-    <div className="flex md:hidden lg:flex gap-1 md:gap-0">
+    <div className="flex gap-1 lg:flex">
       <HoverBtnWrapper px={0.25} py={0.25}>
         <a href={ghLink} target="_blank">
-          <GithubIcon className="h-6 w-6 md:h-5 fill-[var(--primary-dark-blue)]" />
+          <GithubIcon className="h-6 w-6 fill-[var(--primary-dark-blue)] lg:h-7 lg:w-7" />
         </a>
       </HoverBtnWrapper>
 
       <HoverBtnWrapper px={0.25} py={0.25}>
         <a href={liveLink} target="_blank">
-          <LinkIcon className="h-6 w-6 md:h-5 fill-[var(--primary-dark-blue)]" />
+          <LinkIcon className="h-6 w-6 fill-[var(--primary-dark-blue)] lg:h-7 lg:w-7" />
         </a>
       </HoverBtnWrapper>
     </div>
