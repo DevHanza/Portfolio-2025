@@ -16,7 +16,7 @@
   }
 
   .skill-card {
-    transition: var(--main- );
+    transition: var(--main-transition);
   }
 
   .skill-card-mini:hover .tooltip {
