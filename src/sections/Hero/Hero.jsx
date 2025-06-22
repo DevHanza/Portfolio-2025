@@ -1,5 +1,5 @@
 import { Button } from "../../components/Buttons/Buttons";
-import SocialButtons from "../../components/buttons/SocialButtons";
+
 import { useRef } from "react";
 
 import { SlideInUp, SlideInRight } from "../../transitions/Slide";
