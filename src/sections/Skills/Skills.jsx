@@ -72,7 +72,7 @@ function Skills() {
             <SkillCardMini name="tailwindcss" title="TailwindCSS" />
             <SkillCardMini name="git" title="Git" />
             <SkillCardMini
-              customImgSrc="https://go-skill-icons.vercel.app/api/icons?i=gsap&theme=light"
+              customImgSrc="/logos/skills/GSAP.svg"
               title="GSAP"
               name={false}
             />
@@ -88,9 +88,13 @@ function Skills() {
               title="Webflow"
               name={false}
             />
-            <SkillCardMini title="Framer" name="framermotion" />
             <SkillCardMini
-              customImgSrc="https://go-skill-icons.vercel.app/api/icons?i=webstudio&theme=light"
+              title="Framer"
+              customImgSrc="/logos/skills/Framer.svg"
+              name={false}
+            />
+            <SkillCardMini
+              customImgSrc="/logos/skills/Webstudio.svg"
               title="WebStudio.is"
               name={false}
             />
