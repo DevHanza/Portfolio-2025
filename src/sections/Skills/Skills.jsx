@@ -71,18 +71,32 @@ function Skills() {
             <SkillCardMini name="sass" title="SASS" />
             <SkillCardMini name="tailwindcss" title="TailwindCSS" />
             <SkillCardMini name="git" title="Git" />
-            <SkillCardMini name="gsap" title="GSAP" />
+            <SkillCardMini
+              customImgSrc="https://go-skill-icons.vercel.app/api/icons?i=gsap&theme=light"
+              title="GSAP"
+              name={false}
+            />
             <SkillCardMini name="python" title="Python" />
             <SkillCardMini name="nodejs" title="Node.js" />
             <SkillCardMini name="mysql" title="MySQL" />
             <SkillCardMini name="express" title="Express.js" />
             <SkillCardMini name="mongodb" title="MongoDB" />
-            <SkillCardMini name="php" title="PHP" />
+
             <SkillCardMini name="wordpress" type="plain" title="WordPress" />
-            <SkillCardMini name="framer" title="Framer" />
-            <SkillCardMini name="webflow" title="Webflow" />
-            <SkillCardMini name="webstudio" title="Webstudio" />
+            <SkillCardMini
+              customImgSrc="https://go-skill-icons.vercel.app/api/icons?i=webflow&theme=light"
+              title="Webflow"
+              name={false}
+            />
+            <SkillCardMini title="Framer" name="framermotion" />
+            <SkillCardMini
+              customImgSrc="https://go-skill-icons.vercel.app/api/icons?i=webstudio&theme=light"
+              title="WebStudio.is"
+              name={false}
+            />
             <SkillCardMini name="photoshop" title="Photoshop" />
+            <SkillCardMini name="php" title="PHP" />
+            <SkillCardMini name="c" title="C" />
           </div>
         </div>
       </div>
@@ -108,12 +122,21 @@ function SkillCard({ name = "js", title = "JavaScript", theme = "light" }) {
   );
 }
 
-function SkillCardMini({ name = "html", title, type = "original" }) {
+function SkillCardMini({
+  name = "html",
+  title = "html",
+  type = "original",
+  customImgSrc,
+}) {
   return (
     <div className="skill-card-mini relative flex cursor-pointer rounded-lg border-1 border-stone-100 bg-white p-3 transition-all duration-200 ease-in-out">
       <img
         className="h-11"
-        src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-${type}.svg`}
+        src={
+          name
+            ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-${type}.svg`
+            : customImgSrc
+        }
         alt={title}
       />
 
