@@ -6,7 +6,7 @@ header {
 
   button,
   nav ul {
-    transition: all var(--spring-duration) var(--spring-easing);
+    transition: var(--main-transition);
   }
 
   /* `lg` 64rem (1024px) */
@@ -21,7 +21,7 @@ header {
   }
 }
 .nav-links {
-  transition: all var(--spring-duration) var(--spring-easing);
+  transition: all 0.1s var(--tr-bezier);
   overflow: clip;
 }
 

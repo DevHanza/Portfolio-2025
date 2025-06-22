@@ -16,7 +16,7 @@
   }
 
   .skill-card {
-    transition: all var(--spring-duration) var(--spring-easing);
+    transition: var(--main- );
   }
 
   .skill-card-mini:hover .tooltip {

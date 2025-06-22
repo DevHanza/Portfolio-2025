@@ -10,34 +10,10 @@
 }
 
 :root {
-  --spring-easing: linear(
-    0,
-    0.0018,
-    0.0069 1.16%,
-    0.0262 2.32%,
-    0.0642,
-    0.1143 5.23%,
-    0.2244 7.84%,
-    0.5881 15.68%,
-    0.6933,
-    0.7839,
-    0.8591,
-    0.9191 26.13%,
-    0.9693,
-    1.0044 31.93%,
-    1.0234,
-    1.0358 36.58%,
-    1.0434 39.19%,
-    1.046 42.39%,
-    1.0446 44.71%,
-    1.0404 47.61%,
-    1.0118 61.84%,
-    1.0028 69.39%,
-    0.9981 80.42%,
-    0.9991 99.87%
-  );
-  --spring-duration: 0.5s;
-  transition: all var(--spring-duration) var(--spring-easing);
+  --tr-duration: 0.6s;
+  --tr-bezier: cubic-bezier(0.22, 1, 0.36, 1);
+  --main-transition: all var(--tr-duration) var(--tr-bezier);
+  transition: var(--main-transition);
 }
 
 ::-moz-selection {
