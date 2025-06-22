@@ -74,7 +74,7 @@ function Hero() {
 
             <div className="slide-in-up mx-auto mb-9 max-w-[85%] text-[var(--primary-dark-blue)]/75 md:mx-0 md:max-w-[90%] md:text-lg lg:max-w-[90%]">
               <p className="inline leading-6 tracking-tight">
-                Developer who fell in love with programming since 2019, driven
+                Developer who fell in love with programming since 2018, driven
                 by passion.
               </p>
             </div>
