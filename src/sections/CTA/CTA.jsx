@@ -55,8 +55,8 @@ function CTA() {
             Need a Developer You Can Count On?
           </h2>
           <p className="fade-in mx-auto mb-7 max-w-lg text-base font-light text-stone-200">
-            Whether you're hiring or starting a new project, I build fast,
-            modern websites that work beautifully and feel great to use.
+            Want someone to bring your project to life?
+I build modern websites that look stunning and feel intuitive to use. ✨
           </p>
           <div className="fade-in">
             <Button type="secondary" href="https://calendly.com" newtab="true">
