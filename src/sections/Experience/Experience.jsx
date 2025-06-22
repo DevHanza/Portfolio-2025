@@ -24,7 +24,7 @@ const ExperienceData = [
   {
     id: 2,
     title: "Frontend Developer",
-    loc: "Fiverr",
+    loc: "Fiverr – Freelance",
     logo: "/logos/fiverr_logo.png",
     from: "2024-01-01",
     to: "2025-03-24",
