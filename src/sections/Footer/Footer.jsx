@@ -56,13 +56,16 @@ function Footer() {
 
                 <ul className="flex flex-col gap-3">
                   <li className="text-sm text-[var(--primary-dark-blue)]/75 hover:text-[var(--primary-dark-blue)]">
-                    <a href="">Github</a>
+                    <a href="https://github.com/DevHanza/">Github</a>
                   </li>
                   <li className="text-sm text-[var(--primary-dark-blue)]/75 hover:text-[var(--primary-dark-blue)]">
-                    <a href="">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/devhanza/">LinkedIn</a>
                   </li>
                   <li className="text-sm text-[var(--primary-dark-blue)]/75 hover:text-[var(--primary-dark-blue)]">
-                    <a href="">Medium</a>
+                    <a href="https://contra.com/devhanza/work">Contra</a>
+                  </li>
+                  <li className="text-sm text-[var(--primary-dark-blue)]/75 hover:text-[var(--primary-dark-blue)]">
+                    <a href="https://devhanza.medium.com/">Medium</a>
                   </li>
                 </ul>
               </nav>
@@ -74,10 +77,10 @@ function Footer() {
 
                 <ul className="flex flex-col gap-3">
                   <li className="text-sm text-[var(--primary-dark-blue)]/75 hover:text-[var(--primary-dark-blue)]">
-                    <a href="">Blog</a>
+                    <a href="https://devhanza.medium.com/">Blog</a>
                   </li>
                   <li className="text-sm text-[var(--primary-dark-blue)]/75 hover:text-[var(--primary-dark-blue)]">
-                    <a href="">Newsletter</a>
+                    <a href="https://devhanza.medium.com/">Newsletter</a>
                   </li>
                 </ul>
               </nav>
