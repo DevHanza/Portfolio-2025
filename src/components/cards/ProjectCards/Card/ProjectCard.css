@@ -1,12 +1,21 @@
 .project-card {
   flex: 1 1 100%;
   box-sizing: border-box;
+  scale: 1;
+
+  .project-card-img {
+    transition: var(--main-transition);
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
 
   /* 20px is the gap between the cards. */
 
   /* `md` 48rem (768px) */
   @media (width >= 48rem) {
-      flex: 1;
+    flex: 1;
     /* flex: 1 1 calc(50% - 8px);  */
   }
 

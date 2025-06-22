@@ -12,9 +12,9 @@ function ProjectCard({
 }) {
   return (
     <div className="project-card flex flex-col gap-4.5">
-      <a href={ghLink} target="_blank">
+      <a href={ghLink} target="_blank" className="overflow-hidden rounded-lg">
         <img
-          className="aspect-video w-full overflow-hidden rounded-lg object-cover object-center"
+          className="project-card-img aspect-video w-full overflow-hidden object-cover object-center"
           src={imgSrc}
           alt="Project Image"
         />
@@ -40,7 +40,7 @@ function ProjectCard({
 
 export default ProjectCard;
 
-function ProjectCardLinks({ghLink, liveLink}) {
+function ProjectCardLinks({ ghLink, liveLink }) {
   return (
     <div className="flex gap-1 lg:flex">
       <HoverBtnWrapper px={0.25} py={0.25}>
