@@ -11,6 +11,76 @@ gsap.registerPlugin(ScrollTrigger);
 import { SlideInLeft, SlideInRight, SlideInUp } from "../../transitions/Slide";
 import { FadeIn } from "../../transitions/Fade";
 
+const ExperienceData = [
+  {
+    title: "Web Developer",
+    loc: "Avlanche",
+    logo: "/logos/avlanche_logo.png",
+    from: "2025-03-24",
+    to: "today",
+    dot: "right",
+  },
+  {
+    title: "Frontend Developer",
+    loc: "Fiverr",
+    logo: "/logos/fiverr_logo.png",
+    from: "2024-01-01",
+    to: "2025-03-24",
+    dot: "right",
+  },
+  {
+    title: "Freelance Web Developer",
+    loc: "Self Employed",
+    logo: "/org_logo.png",
+    from: "2022-01-01",
+    to: "2025-03-24",
+    dot: "right",
+  },
+];
+
+const EducationData = [
+  {
+    title: "Trainee - Full Stack Developer",
+    loc: "Univeristy of Moratuwa",
+    logo: "/logos/uom_logo.png",
+    from: "2023-05",
+    to: "2024-05",
+    dot: "left",
+  },
+  {
+    title: "CS50: Introduction to Computer Science",
+    loc: "Harvard University",
+    logo: "/logos/harvard_logo.png",
+    from: "2024-08",
+    to: "2024-11",
+    dot: "left",
+  },
+  {
+    title: "G.C.E Advanced Level",
+    loc: "Nugawela Central College",
+    logo: "/logos/ncc_logo.png",
+    from: "2021-12",
+    to: "2023-12",
+    dot: "left",
+  },
+  {
+    title: "English Language",
+    loc: "Vocational Training Authority",
+    logo: "/logos/vta_logo.png",
+    from: "2021-04",
+    to: "2022-04",
+    dot: "left",
+  },
+  {
+    title: "G.C.E Ordinary Level",
+    loc: "Sri Rahula College",
+    logo: "/logos/srck_logo.png",
+    from: "2010-01",
+    to: "2021-01",
+    dot: "left",
+  },
+];
+
 function Experience() {
   const expContainerRef = useRef();
   const expTimeline = useRef();
@@ -73,10 +143,9 @@ function Experience() {
           </h3>
 
           <div className="slide-in-left flex flex-1 flex-col gap-2 md:gap-4">
-            <ExperienceCard dot="right" />
-            <ExperienceCard dot="right" />
-            {/* <ExperienceCard /> */}
-            <ExperienceCard to="2025-06-01" dot="right" />
+            {ExperienceData.map((item) => (
+              <ExperienceCard {...item} />
+            ))}
           </div>
 
           <div className="fade-in relative hidden flex-col justify-between md:flex">
@@ -88,10 +157,9 @@ function Experience() {
           </h3>
 
           <div className="slide-in-right flex flex-1 flex-col gap-2 md:gap-4">
-            <ExperienceCard dot="left" />
-            <ExperienceCard dot="left" />
-            <ExperienceCard dot="left" />
-            <ExperienceCard dot="left" />
+            {EducationData.map((item) => (
+              <ExperienceCard {...item} />
+            ))}
           </div>
         </div>
       </div>
@@ -136,7 +204,7 @@ function ExperienceCard({
         />
 
         <div className="relative">
-          <h6 className="text-lg font-medium">{title}</h6>
+          <h6 className="text-lg font-medium tracking-tight">{title}</h6>
           <p className="text-sm text-[var(--primary-mid-blue)]">{loc}</p>
           <p className="text-sm text-[var(--primary-dark-blue)]/75">
             {startDateString} - {endDateString} · {expTime}
@@ -154,14 +222,14 @@ function ExperienceCard({
 }
 
 function calcDate(startDate, endDate) {
-  let monthsDiff = endDate.getMonth() - startDate.getMonth();
-  let yearsDiff = endDate.getFullYear() - startDate.getFullYear();
+  const yearsDiff = endDate.getFullYear() - startDate.getFullYear();
+  const monthsDiff = endDate.getMonth() - startDate.getMonth();
+  const totalMonths = yearsDiff * 12 + monthsDiff;
 
-  if (yearsDiff < 1) {
-    return `${monthsDiff} mos`;
-  }
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
 
-  return `${yearsDiff} yrs ${monthsDiff} mos`;
+  return `${years} yrs ${months} mos`;
 }
 
 function formatExpDate(date) {
