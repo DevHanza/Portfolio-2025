@@ -13,6 +13,7 @@ import { FadeIn } from "../../transitions/Fade";
 
 const ExperienceData = [
   {
+    id: 1,
     title: "Web Developer",
     loc: "Avlanche",
     logo: "/logos/avlanche_logo.png",
@@ -21,6 +22,7 @@ const ExperienceData = [
     dot: "right",
   },
   {
+    id: 2,
     title: "Frontend Developer",
     loc: "Fiverr",
     logo: "/logos/fiverr_logo.png",
@@ -29,6 +31,7 @@ const ExperienceData = [
     dot: "right",
   },
   {
+    id: 3,
     title: "Freelance Web Developer",
     loc: "Self Employed",
     logo: "/org_logo.png",
@@ -40,6 +43,7 @@ const ExperienceData = [
 
 const EducationData = [
   {
+    id: 1,
     title: "Trainee - Full Stack Developer",
     loc: "Univeristy of Moratuwa",
     logo: "/logos/uom_logo.png",
@@ -48,6 +52,7 @@ const EducationData = [
     dot: "left",
   },
   {
+    id: 2,
     title: "CS50: Introduction to Computer Science",
     loc: "Harvard University",
     logo: "/logos/harvard_logo.png",
@@ -56,6 +61,7 @@ const EducationData = [
     dot: "left",
   },
   {
+    id: 3,
     title: "G.C.E Advanced Level",
     loc: "Nugawela Central College",
     logo: "/logos/ncc_logo.png",
@@ -64,6 +70,7 @@ const EducationData = [
     dot: "left",
   },
   {
+    id: 4,
     title: "English Language",
     loc: "Vocational Training Authority",
     logo: "/logos/vta_logo.png",
@@ -72,6 +79,7 @@ const EducationData = [
     dot: "left",
   },
   {
+    id: 5,
     title: "G.C.E Ordinary Level",
     loc: "Sri Rahula College",
     logo: "/logos/srck_logo.png",
@@ -144,7 +152,7 @@ function Experience() {
 
           <div className="slide-in-left flex flex-1 flex-col gap-2 md:gap-4">
             {ExperienceData.map((item) => (
-              <ExperienceCard {...item} />
+              <ExperienceCard key={item.id} {...item} />
             ))}
           </div>
 
@@ -158,7 +166,7 @@ function Experience() {
 
           <div className="slide-in-right flex flex-1 flex-col gap-2 md:gap-4">
             {EducationData.map((item) => (
-              <ExperienceCard {...item} />
+              <ExperienceCard key={item.id} {...item} />
             ))}
           </div>
         </div>
