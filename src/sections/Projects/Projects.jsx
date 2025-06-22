@@ -132,29 +132,35 @@ function Projects() {
         <div className="flex flex-col gap-10">
           <div className="slide-in-up flex flex-col gap-8 md:flex-row md:gap-4 lg:gap-5">
             <ProjectCard
-              title="Cafesy"
-              desc="Responsive Website"
+              title="Cafesy&nbsp; — &nbsp;E‑Commerce Website"
+              desc="Website template for cafés with payments, live chat, email capture and more. (Node.js, Express.js, JavaScript, SCSS, HTML)"
               ghLink="https://github.com/DevHanza/cafesy"
-              liveLink="#"
+              liveLink="https://cafesy.onrender.com/"
               imgSrc="ProjectThumbs/Cafesy.png"
             />
             <ProjectCard
-              ghLink=""
-              liveLink=""
+              title="Hanzas&nbsp; — &nbsp;Web Agency Website"
+              desc="Modern responsive template for web agencies. (HTML, CSS, JavaScript + WebStudio)"
+              ghLink="https://github.com/DevHanza/hanzas-web-agency-template"
+              liveLink="https://hanzaswebdesign.wstd.io/"
               imgSrc="ProjectThumbs/Hanzas.png"
             />
           </div>
 
           <div className="slide-in-up flex flex-col gap-8 md:flex-row md:gap-4 lg:gap-5">
             <ProjectCard
-              ghLink=""
-              liveLink=""
+              title="SchoolNotes&nbsp; — &nbsp;MEAN‑stack Application"
+              desc="MEAN‑stack platform to CRUD, categorize, and search notes. (MongoDB, Angular, Express.js, Node.js, TypeScript)"
+              ghLink="https://github.com/DevHanza/school-notes-angular"
+              liveLink="#"
               imgSrc="ProjectThumbs/SchoolNotes.png"
             />
 
             <ProjectCard
-              ghLink=""
-              liveLink=""
+              title="TelegramYTDLBot&nbsp; — &nbsp;Telegram Bot"
+              desc="Telegram bot to download YouTube videos in various qualities up to 4K resolution. (Python, pyTelegramBotAPI)"
+              ghLink="https://github.com/DevHanza/TelegramYTDLBot"
+              liveLink="#"
               imgSrc="ProjectThumbs/TelegramYTDLBot.png"
             />
           </div>
