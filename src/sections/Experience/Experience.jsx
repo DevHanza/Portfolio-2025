@@ -73,34 +73,14 @@ function Experience() {
           </h3>
 
           <div className="slide-in-left flex flex-1 flex-col gap-2 md:gap-4">
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard to="2025-06-01" />
+            <ExperienceCard dot="right" />
+            <ExperienceCard dot="right" />
+            {/* <ExperienceCard /> */}
+            <ExperienceCard to="2025-06-01" dot="right" />
           </div>
 
-          <div className="fade-in relative my-12 hidden w-12 flex-col justify-between md:flex">
+          <div className="fade-in relative hidden flex-col justify-between md:flex">
             <span className="absolute left-1/2 h-full w-[3px] -translate-x-1/2 bg-stone-200"></span>
-
-            <div className="relative">
-              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
-              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
-            </div>
-
-            <div className="relative">
-              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
-              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
-            </div>
-
-            <div className="relative">
-              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
-              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
-            </div>
-
-            <div className="relative">
-              <div className="z-2 mx-auto h-4 w-4 rounded-full bg-stone-200"></div>
-              <div className="absolute top-1/2 -z-1 h-[3px] w-full -translate-y-1/2 bg-stone-200"></div>
-            </div>
           </div>
 
           <h3 className="text-center text-xl font-medium tracking-tight md:hidden">
@@ -108,10 +88,10 @@ function Experience() {
           </h3>
 
           <div className="slide-in-right flex flex-1 flex-col gap-2 md:gap-4">
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
+            <ExperienceCard dot="left" />
+            <ExperienceCard dot="left" />
+            <ExperienceCard dot="left" />
+            <ExperienceCard dot="left" />
           </div>
         </div>
       </div>
@@ -121,38 +101,53 @@ function Experience() {
 
 export default Experience;
 
+// EXPERIENCE CARD
+
 function ExperienceCard({
   title = "Web Developer",
   loc = "IFS",
   logo = "/logo.png",
   from = "2018-01-01",
   to = "today",
+  dot = "right",
 }) {
   useEffect(() => {
     setExpTime(calcDate(startDate, endDate));
   }, []);
 
   const [expTime, setExpTime] = useState("0 mos");
-
   const startDate = new Date(from);
   const endDate = to === "today" ? new Date() : new Date(to);
-
   const startDateString = formatExpDate(startDate);
   const endDateString = to === "today" ? "Present" : formatExpDate(endDate);
 
+  const dotRight = dot === "right";
+  const dotLeft = dot === "left";
+
   return (
-    <div className="flex flex-row items-start gap-5 rounded-xl bg-stone-100 px-4 py-4.5">
-      <img
-        className="max-h-16 rounded-lg"
-        src={`${logo}`}
-        alt={`Logo of ${loc}`}
-      />
-      <div className="">
-        <h6 className="text-lg font-medium">{title}</h6>
-        <p className="text-sm text-[var(--primary-mid-blue)]">{loc}</p>
-        <p className="text-sm text-[var(--primary-dark-blue)]/75">
-          {startDateString} - {endDateString} · {expTime}
-        </p>
+    <div
+      className={`flex items-center justify-center ${dotLeft ? "flex-row-reverse" : "flex-row"}`}
+    >
+      <div className="flex w-full flex-row items-start gap-5 rounded-xl bg-stone-100 px-4 py-4.5">
+        <img
+          className="max-h-16 rounded-lg"
+          src={`${logo}`}
+          alt={`Logo of ${loc}`}
+        />
+
+        <div className="relative">
+          <h6 className="text-lg font-medium">{title}</h6>
+          <p className="text-sm text-[var(--primary-mid-blue)]">{loc}</p>
+          <p className="text-sm text-[var(--primary-dark-blue)]/75">
+            {startDateString} - {endDateString} · {expTime}
+          </p>
+        </div>
+      </div>
+      <div className={`relative hidden w-6 flex-row items-center md:flex`}>
+        <div className="h-[3px] w-full bg-stone-200"></div>
+        <div
+          className={`absolute z-2 mx-auto h-4 w-4 min-w-4 rounded-full bg-stone-200 ${dotLeft ? "left-0 -translate-x-1/2" : "right-0 translate-x-1/2"}`}
+        ></div>
       </div>
     </div>
   );
