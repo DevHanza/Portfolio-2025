@@ -1,6 +1,6 @@
 import "./App.css";
 
-import AnnouncementBar from "./components/layout/AnnouncementBar";
+// import AnnouncementBar from "./components/layout/AnnouncementBar";
 import Header from "./sections/Header/Header";
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
@@ -21,7 +21,7 @@ export const NavItems = [
 function App() {
   return (
     <>
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
 
       <Header />
 
