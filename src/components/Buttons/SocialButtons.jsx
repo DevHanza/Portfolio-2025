@@ -1,9 +1,7 @@
-import HoverBtnWrapper from "./Buttons/HoverBtnWrapper";
-import LinkedinIcon from "../assets/svg/linkedin";
-import GithubIcon from "../assets/svg/github";
-import StackOverflowIcon from "../assets/svg/stack-overflow";
-import MediumIcon from "../assets/svg/medium";
-import DevToIcon from "../assets/svg/dev-to";
+import HoverBtnWrapper from "./HoverBtnWrapper";
+import LinkedinIcon from "../../assets/svg/linkedin";
+import GithubIcon from "../../assets/svg/github";
+import MediumIcon from "../../assets/svg/medium";
 
 function SocialButtons({
   classes,
@@ -24,23 +22,11 @@ function SocialButtons({
         </a>
       </HoverBtnWrapper>
 
-      {/* <HoverBtnWrapper>
-        <a href="https://stackoverflow.com/users/16218477/hansana-prabath" target="_blank">
-          <StackOverflowIcon className={`${size} ${color}`} />
-        </a>
-      </HoverBtnWrapper> */}
-
       <HoverBtnWrapper>
         <a href="https://medium.com/@devhanza" target="_blank">
           <MediumIcon className={`${size} ${color}`} />
         </a>
       </HoverBtnWrapper>
-
-      {/* <HoverBtnWrapper>
-        <a href="https://dev.to/devhanza" target="_blank">
-          <DevToIcon className={`${size} ${color}`} />
-        </a>
-      </HoverBtnWrapper> */}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import "./Skills.css";
-import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import SectionHeading from "../../components/layout/SectionHeading/SectionHeading";
 
 import { useRef } from "react";
-import { SlideInUp, SlideInRight } from "../../transitions/Slide";
+import { SlideInUp } from "../../transitions/Slide";
 // GSAP
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

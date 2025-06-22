@@ -1,6 +1,6 @@
 import "./App.css";
 
-import AnnouncementBar from "./components/AnnouncementBar";
+import AnnouncementBar from "./components/layout/AnnouncementBar";
 import Header from "./sections/Header/Header";
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
@@ -8,7 +8,6 @@ import Skills from "./sections/Skills/Skills";
 import Experience from "./sections/Experience/Experience";
 import BackToTopButton from "./components/Buttons/BackToTopButton";
 import Footer from "./sections/Footer/Footer";
-import { useState } from "react";
 
 // Nav Items
 export const NavItems = [

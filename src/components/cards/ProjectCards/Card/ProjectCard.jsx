@@ -1,6 +1,6 @@
-import GithubIcon from "../../../assets/svg/github";
-import LinkIcon from "../../../assets/svg/link";
-import HoverBtnWrapper from "../../Buttons/HoverBtnWrapper";
+import GithubIcon from "../../../../assets/svg/github";
+import LinkIcon from "../../../../assets/svg/link";
+import HoverBtnWrapper from "../../../buttons/HoverBtnWrapper";
 import "./ProjectCard.css";
 
 function ProjectCard({

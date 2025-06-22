@@ -1,4 +1,4 @@
-import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import SectionHeading from "../../components/layout/SectionHeading/SectionHeading";
 import { useEffect, useState, useRef } from "react";
 
 // GSAP

@@ -1,6 +1,6 @@
 import { NavItems } from "../../App";
-import SocialButtons from "../../components/SocialButtons";
-import PulseDot from "../../components/pulseDot/pulseDot";
+import SocialButtons from "../../components/buttons/SocialButtons";
+import PulseDot from "../../components/ui/pulseDot/pulseDot";
 import CTA from "../CTA/CTA";
 import "./Footer.css";
 

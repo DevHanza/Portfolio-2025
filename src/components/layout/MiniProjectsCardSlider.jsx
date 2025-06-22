@@ -1,6 +1,6 @@
 import ChevronLeftIcon from "../../assets/svg/chevron-left";
 import ChevronRightIcon from "../../assets/svg/chevron-right";
-import MiniProjectsCard from "./Mini-Card/MiniProjectCard";
+import MiniProjectsCard from "../cards/ProjectCards/Mini-Card/MiniProjectCard";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";

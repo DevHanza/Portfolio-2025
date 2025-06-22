@@ -1,6 +1,6 @@
-import SectionHeading from "../../components/SectionHeading/SectionHeading";
-import ProjectCard from "../../components/ProjectCards/Card/ProjectCard";
-import MiniProjectsCardSlider from "../../components/ProjectCards/MiniProjectsCardSlider";
+import SectionHeading from "../../components/layout/SectionHeading/SectionHeading";
+import ProjectCard from "../../components/cards/ProjectCards/Card/ProjectCard";
+import MiniProjectsCardSlider from "../../components/layout/MiniProjectsCardSlider";
 
 import { useRef } from "react";
 import { SlideInUp } from "../../transitions/Slide";
