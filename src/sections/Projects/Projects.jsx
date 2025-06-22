@@ -165,7 +165,7 @@ function Projects() {
             />
           </div>
 
-          <div className="slide-in-up">
+          <div className="slide-in-up mt-4">
             <MiniProjectsCardSlider miniProjectsList={miniProjectsList} />
           </div>
         </div>
