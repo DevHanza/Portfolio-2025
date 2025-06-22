@@ -61,7 +61,7 @@ function CTA() {
           <div className="fade-in">
             <Button
               type="secondary"
-              href="mailto:hello@hansana.is-a.dev"
+              href="https://cal.com/devhanza/30min"
               newtab="true"
             >
               Book a Free Call
