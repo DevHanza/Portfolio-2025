@@ -31,7 +31,7 @@ function ProjectCard({
             </p>
           </a>
 
-          <ProjectCardLinks ghLink liveLink />
+          <ProjectCardLinks ghLink={ghLink} liveLink={liveLink} />
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ function ProjectCard({
 
 export default ProjectCard;
 
-function ProjectCardLinks(ghLink, liveLink) {
+function ProjectCardLinks({ghLink, liveLink}) {
   return (
     <div className="flex gap-1 lg:flex">
       <HoverBtnWrapper px={0.25} py={0.25}>
