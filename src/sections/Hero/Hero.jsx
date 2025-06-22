@@ -1,5 +1,5 @@
-import { Button } from "../../components/Buttons/Buttons";
-// import SocialButtons from "../../components/buttons/SocialButtons";
+import { Button } from "../../components/buttons/Buttons";
+import SocialButtons from "../../components/buttons/SocialButtons";
 import { useRef } from "react";
 
 import { SlideInUp, SlideInRight } from "../../transitions/Slide";
@@ -111,10 +111,10 @@ function Hero() {
 
           <div className="flex flex-col items-center gap-4 text-center text-base font-medium tracking-tight text-stone-500 capitalize">
             <p>Stay connected — follow me!</p>
-            {/* <SocialButtons
+            <SocialButtons
               size="lg:h-8 lg:w-8 h-7 w-7"
               classes="gap-0 md:gap-2"
-            /> */}
+            />
           </div>
 
           <hr className="flex-grow text-gray-300" />
