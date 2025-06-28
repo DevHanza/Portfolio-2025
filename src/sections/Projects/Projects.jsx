@@ -142,7 +142,7 @@ function Projects() {
               title="Hanzas&nbsp; — &nbsp;Web Agency Website"
               desc="Modern responsive template for web agencies. (HTML, CSS, JavaScript + WebStudio)"
               ghLink="https://github.com/DevHanza/hanzas-web-agency-template"
-              liveLink="https://hanzaswebdesign.wstd.io/"
+              liveLink="https://hanzas-web-agency.pages.dev/"
               imgSrc="ProjectThumbs/Hanzas.png"
             />
           </div>
