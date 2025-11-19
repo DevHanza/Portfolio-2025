@@ -99,7 +99,7 @@ function Hero() {
 
           <div className="slide-in-right hero-image flex basis-1/2 content-center md:justify-end">
             <img
-              src="/hanza-blurred.png"
+              src="/hanza.png"
               alt="Portrait Image of Hansana."
               className="w-full rounded-xl bg-stone-300 object-cover p-5 pb-0 lg:h-90 lg:w-100"
             />
