@@ -18,7 +18,7 @@ const ExperienceData = [
     loc: "Avlanche",
     logo: "/logos/avlanche_logo.png",
     from: "2025-03-24",
-    to: "today",
+    to: "2025-10-24",
     dot: "right",
   },
   {
