@@ -64,7 +64,7 @@ function Hero() {
             </h1>
             <div className="slide-in-up mx-auto mb-3 flex md:mx-0">
               <p className="inline text-xl tracking-tight md:text-2xl lg:text-2xl">
-                Frontend Engineer
+                Frontend Software Engineer
               </p>
               <img
                 className="my-auto ml-2 inline-block h-6 leading-none"
