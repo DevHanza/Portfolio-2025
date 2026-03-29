@@ -1,4 +1,4 @@
-import SectionHeading from "../../components/layout/SectionHeading/SectionHeading";
+import SectionHeading from "../components/layout/SectionHeading/SectionHeading";
 import { useEffect, useState, useRef } from "react";
 
 // GSAP
@@ -8,8 +8,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-import { SlideInLeft, SlideInRight, SlideInUp } from "../../transitions/Slide";
-import { FadeIn } from "../../transitions/Fade";
+import { SlideInLeft, SlideInRight, SlideInUp } from "../transitions/Slide";
+import { FadeIn } from "../transitions/Fade";
 
 const ExperienceData = [
   {

@@ -1,9 +1,9 @@
-import SectionHeading from "../../components/layout/SectionHeading/SectionHeading";
-import ProjectCard from "../../components/cards/ProjectCards/Card/ProjectCard";
-import MiniProjectsCardSlider from "../../components/layout/MiniProjectsCardSlider";
+import SectionHeading from "../components/layout/SectionHeading/SectionHeading";
+import ProjectCard from "../components/cards/ProjectCards/Card/ProjectCard";
+// import MiniProjectsCardSlider from "../../components/layout/MiniProjectsCardSlider";
 
 import { useRef } from "react";
-import { SlideInUp } from "../../transitions/Slide";
+import { SlideInUp } from "../transitions/Slide";
 
 const miniProjectsList = [
   {

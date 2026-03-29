@@ -1,12 +1,10 @@
-import "./App.css";
-
 // import AnnouncementBar from "./components/layout/AnnouncementBar";
 import Header from "./sections/Header/Header";
-import Hero from "./sections/Hero/Hero";
-import Projects from "./sections/Projects/Projects";
+import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 import Skills from "./sections/Skills/Skills";
-import Experience from "./sections/Experience/Experience";
-import BackToTopButton from "./components/Buttons/BackToTopButton";
+import Experience from "./sections/Experience";
+import BackToTopButton from "./components/buttons/BackToTopButton";
 import Footer from "./sections/Footer/Footer";
 
 // Nav Items

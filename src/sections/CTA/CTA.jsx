@@ -1,5 +1,5 @@
 import "./CTA.css";
-import { Button } from "../../components/Buttons/Buttons";
+import { Button } from "../../components/buttons/Buttons";
 
 import { useRef } from "react";
 

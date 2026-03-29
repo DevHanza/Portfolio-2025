@@ -1,9 +1,9 @@
-import { Button } from "../../components/buttons/Buttons";
-import SocialButtons from "../../components/buttons/SocialButtons";
+import { Button } from "../components/buttons/Buttons";
+import SocialButtons from "../components/buttons/SocialButtons";
 import { useRef } from "react";
 
-import { SlideInUp, SlideInRight } from "../../transitions/Slide";
-import { FadeIn } from "../../transitions/Fade";
+import { SlideInUp, SlideInRight } from "../transitions/Slide";
+import { FadeIn } from "../transitions/Fade";
 
 // GSAP
 import gsap from "gsap";

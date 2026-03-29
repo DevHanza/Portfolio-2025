@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { NavItems } from "../../App";
-import HoverBtnWrapper from "../../components/Buttons/HoverBtnWrapper";
-import { Button } from "../../components/Buttons/Buttons";
+import HoverBtnWrapper from "../../components/buttons/HoverBtnWrapper";
+import { Button } from "../../components/buttons/Buttons";
 import ArrowUpRightStrokeIcon from "../../assets/svg/arrow-up-right-stroke";
 import MenuWiderIcon from "../../assets/svg/menu";
 
