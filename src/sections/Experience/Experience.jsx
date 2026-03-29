@@ -138,7 +138,7 @@ function Experience() {
         <div className="slide-in-up">
           <SectionHeading
             label="Experience"
-            title="Where I’ve Been & What I’ve Done"
+            title="My Journey"
             title_text="This is how I've spent the past few years — helping businesses grow through my skills and making the web a better place."
             direction="row"
             text_m_width=""

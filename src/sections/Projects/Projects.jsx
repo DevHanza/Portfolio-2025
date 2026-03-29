@@ -121,7 +121,7 @@ function Projects() {
         <div className="slide-in-up">
           <SectionHeading
             label="Projects"
-            title="Projects & Work I'm Proud Of"
+            title="My Projects"
             title_text="Here is some of the recent work I've done using my programming and problem-solving skills."
             direction="row"
             text_m_width=""
