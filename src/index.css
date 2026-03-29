@@ -26,7 +26,7 @@
 html {
   scroll-behavior: smooth;
   cursor:
-    url("/cursors/cursor.png") 0 0,
+    url("/cursors/cursor.webp") 0 0,
     auto;
 }
 
@@ -35,7 +35,7 @@ a *,
 button,
 .cursor-pointer {
   cursor:
-    url("/cursors/pointer.png") 10 0,
+    url("/cursors/pointer.webp") 10 0,
     pointer !important;
 }
 
