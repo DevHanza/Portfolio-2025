@@ -20,8 +20,8 @@ function Footer() {
               </h6>
 
               <p className="mx-auto max-w-[90%] text-sm leading-5.5 tracking-tight text-[var(--primary-dark-blue)]/75 md:mx-0 md:max-w-70">
-                A developer, engineer, and designer who’s been building projects
-                since 2019.
+                Developer who fell in love with programming since 2018, driven
+                by passion.
               </p>
 
               <SocialButtons
@@ -92,8 +92,7 @@ function Footer() {
           <div className="flex flex-col justify-between gap-4 py-6 md:flex-row md:gap-0">
             <div className="content-center">
               <p className="mx-auto max-w-[95%] text-center text-sm tracking-tight text-[var(--primary-dark-blue)]/75 md:mx-0 md:w-full md:max-w-none md:text-start">
-                Copyright © {currentYear} - 2019 -{" "}
-                <a href="/">Hansana Prabath</a>. All Rights Reserved.
+                © 2018-{currentYear}. All Rights Reserved.
               </p>
             </div>
 
