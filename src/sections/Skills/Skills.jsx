@@ -72,7 +72,7 @@ function Skills() {
             <SkillCardMini name="tailwindcss" title="TailwindCSS" />
             <SkillCardMini name="git" title="Git" />
             <SkillCardMini
-              customImgSrc="/logos/skills/GSAP.svg"
+              customImgSrc="./logos/skills/GSAP.svg"
               title="GSAP"
               name={false}
             />
@@ -90,11 +90,11 @@ function Skills() {
             />
             <SkillCardMini
               title="Framer"
-              customImgSrc="/logos/skills/Framer.svg"
+              customImgSrc="./logos/skills/Framer.svg"
               name={false}
             />
             <SkillCardMini
-              customImgSrc="/logos/skills/Webstudio.svg"
+              customImgSrc="./logos/skills/Webstudio.svg"
               title="WebStudio.is"
               name={false}
             />
